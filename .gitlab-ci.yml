@@ -1,0 +1,30 @@
+image: node
+
+build:
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - yarn install
+    - cd apps/next
+    - npx next build
+    - npx next export
+  artifacts:
+    paths:
+      - apps/next/out
+  only:
+    - main
+
+pages:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - rm -rf public
+    - mv apps/next/out public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
