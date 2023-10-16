@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "start next platform",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "yarn web",
+      "serverReadyAction": {
+        "pattern": "started server on .+, url: (https?://.+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    },
+
+    {
+      "name": "start expo platform",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "yarn native ",
+      "serverReadyAction": {
+        "pattern": "started server on .+, url: (https?://.+)",
+        "uriFormat": "%s",
+        "action": "openExternally"
+      }
+    }
+  ]
+}
