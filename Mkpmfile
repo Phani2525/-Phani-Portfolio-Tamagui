@@ -1,0 +1,75 @@
+MONOREPO := 1
+
+include $(MKPM)/mkpm
+include $(MKPM)/gnu
+include $(MKPM)/dotenv
+include $(MKPM)/chain
+include $(MKPM)/envcache
+include $(MKPM)/yarn
+
+export PRETTIER ?= $(call yarn_binary,prettier)
+export ESLINT ?= $(call yarn_binary,eslint)
+
+ACTIONS += deps ##
+$(ACTION)/deps: $(PROJECT_ROOT)/package.json $(call workspace_paths,package.json)
+	@$(YARN) install $(DEPS_ARGS)
+	@$(call done,$@)
+
+ACTIONS += format ##
+$(ACTION)/format: $(call git_deps,\.((json)|(md)|([jt]sx?))$$)
+	@$(call workspace_foreach,format,$(FORMAT_ARGS))
+	@$(call done,$@)
+
+ACTIONS += spellcheck ##
+$(ACTION)/spellcheck: $(call git_deps,\.(md)$$)
+	@$(call workspace_foreach,spellcheck,$(SPELLCHECK_ARGS))
+	@$(call done,$@)
+
+ACTIONS += lint ##
+$(ACTION)/lint: $(call git_deps,\.([jt]sx?)$$)
+	@$(call workspace_foreach,lint,$(LINT_ARGS))
+	@$(call done,$@)
+
+ACTIONS += test ##
+$(ACTION)/test: $(call git_deps,\.([jt]sx?)$$)
+	@$(call workspace_foreach,test,$(TEST_ARGS))
+	@$(call done,$@)
+
+.PHONY: upgrade
+upgrade: ##
+	@$(YARN) upgrade-interactive
+
+.PHONY: clean
+clean: ##
+	@$(call workspace_foreach,clean,$(ARGS))
+	-@$(MKCACHE_CLEAN)
+	-@$(JEST) --clearCache $(NOFAIL)
+	-@$(WATCHMAN) watch-del-all $(NOFAIL)
+	-@$(GIT) clean -fXd \
+		$(MKPM_GIT_CLEAN_FLAGS) \
+		$(YARN_GIT_CLEAN_FLAGS) \
+		$(NOFAIL)
+
+.PHONY: purge
+purge: clean ##
+	@$(GIT) clean -fXd
+
+.PHONY: $(patsubst %,%/%,$(WORKSPACE_NAMES))
+$(patsubst %,%/%,$(WORKSPACE_NAMES)):
+	@$(MAKE) -sC $(call map_workspace,$(@D)) $*
+
+HELP = help
+help: $(MKCHAIN_HELP)
+	@$(call workspace_foreach_help,$(MKCHAIN_HELP),$(ARGS))
+
+.PHONY: next/docker/%
+next/docker/%:
+	@$(MAKE) -sC platforms/next/docker $(subst next/docker/,,$@) ARGS=$(ARGS)
+
+.PHONY: storybook/docker/%
+storybook/docker/%:
+	@$(MAKE) -sC platforms/storybook/docker $(subst storybook/docker/,,$@) ARGS=$(ARGS)
+
+CACHE_ENVS += \
+
+-include $(call chain)
