@@ -1,0 +1,64 @@
+import type { Actions } from 'multiplatform.one/zustand';
+import type { ThemeName } from 'ui';
+import { createStateStore } from 'multiplatform.one/zustand';
+import { useColorScheme } from 'react-native';
+import { useEffect } from 'react';
+
+// const { useStore } = createStateStore<ThemeState, ThemeActions>(
+//   'theme',
+//   {
+//     root: 'light',
+//     sub: 'purple',
+//   },
+//   undefined,
+//   { persist: true },
+// );
+
+const { useStore } = createStateStore<ThemeState, ThemeActions>(
+  'theme',
+  {
+    root: 'light',
+    sub: 'purple',
+  },
+  (set) => ({
+    setRoot: (root) => set({ root }),
+    setSub: (sub) => set({ sub }),
+  }),
+  { persist: true },
+);
+
+export function useThemeState() {
+  const scheme = useColorScheme();
+  const themeStore = useStore();
+
+  useEffect(() => {
+    if (themeStore.root || !themeStore.setRoot) return;
+    themeStore.setRoot(scheme === 'dark' ? 'dark' : 'light');
+  }, [themeStore.root]);
+
+  return themeStore;
+}
+
+export interface ThemeState {
+  root: ColorScheme;
+  sub: ThemeName;
+}
+
+export type ThemeActions = Actions<ThemeState, {}>;
+
+export type ColorScheme = 'dark' | 'light';
+
+export type myTheme =
+  | 'red'
+  | 'blue'
+  | 'green'
+  | 'orange'
+  | 'yellow'
+  | 'pink'
+  | 'cyan'
+  | 'teal'
+  | 'lime'
+  | 'amber'
+  | 'gray'
+  | 'brown'
+  | 'blueGray';

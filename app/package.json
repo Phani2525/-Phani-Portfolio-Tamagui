@@ -1,0 +1,54 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "main": "index.ts",
+  "private": true,
+  "sideEffects": [
+    "*.css"
+  ],
+  "dependencies": {
+    "@expo-google-fonts/rock-salt": "^0.2.3",
+    "@expo-google-fonts/silkscreen": "^0.2.3",
+    "@fontsource/rock-salt": "^5.0.3",
+    "@fontsource/silkscreen": "^5.0.3",
+    "@multiplatform.one/keycloak": "^0.7.2",
+    "@react-navigation/native": "^6.1.7",
+    "@react-navigation/native-stack": "^6.9.13",
+    "@tamagui/font-fira-mono": "^1.35.8",
+    "@tamagui/font-glusp": "^1.35.8",
+    "@tamagui/font-inter": "^1.35.8",
+    "@tamagui/font-munro": "^1.35.8",
+    "@tamagui/font-silkscreen": "^1.35.8",
+    "@tamagui/lucide-icons": "^1.35.8",
+    "@tamagui/toast": "^1.35.8",
+    "expo-keycloak-auth": "^1.0.14",
+    "expo-linking": "^4.1.0",
+    "expo-random": "^13.2.0",
+    "i18next": "^23.2.3",
+    "immer": "^10.0.2",
+    "intl-pluralrules": "^2.0.0",
+    "multiplatform.one": "^0.7.3",
+    "react-color": "^2.19.3",
+    "react-i18next": "^13.0.1",
+    "react-native-svg": "13.9.0",
+    "react-reveal": "^1.2.2",
+    "solito": "^3.2.9",
+    "tamagui": "^1.35.8",
+    "zustand": "^4.3.8"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.14",
+    "@types/react-color": "^2",
+    "@types/react-native": "^0.72.2"
+  },
+  "jest": {
+    "testRegex": "((/(tests|__tests__)((/|/[^_.\n][^/\n]*(/[^_.\n][^/\n]+)*/)[^_.\n][^/\n]*))|((/|/.*/)(([^_.\n][^/\n]*.(spec|test))|(spec|test)))).[jt]sx?$",
+    "verbose": true,
+    "testPathIgnorePatterns": []
+  },
+  "jestSonar": {
+    "reportPath": ".mkpm/.tmp/reports",
+    "reportFile": "test-report.xml",
+    "indent": 4
+  }
+}
