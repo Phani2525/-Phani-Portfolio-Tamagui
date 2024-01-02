@@ -1,0 +1,73 @@
+include $(MKPM)/mkpm
+DOTENV ?= $(PROJECT_ROOT)/.env
+include $(MKPM)/gnu
+include $(MKPM)/envcache
+include $(MKPM)/chain
+include $(MKPM)/dotenv
+include $(MKPM)/yarn
+include ../../shared.mk
+
+ACTIONS += deps ##
+$(ACTION)/deps: $(PROJECT_ROOT)/package.json package.json
+ifneq (,$(SUBPROC))
+	@$(MAKE) -C $(PROJECT_ROOT) \~deps ARGS=$(ARGS)
+else
+	@$(YARN) workspaces focus $(ARGS)
+endif
+	@$(call done, $@)
+
+ACTIONS += format~deps ##
+$(ACTION)/format: $(call git_deps,\.((json)|(md)|([jt]sx?))$$)
+#	-@$(call eslint_format,$?)
+	-@$(call prettier,$?,$(ARGS))
+	@$(call done, $@)
+
+ACTIONS += spellcheck~format ##
+$(ACTION)/spellcheck: $(call git_deps,\.(md)$$)
+	-@$(call cspell,$?,$(ARGS))
+	@$(call done, $@)
+
+ACTIONS += lint~spellcheck ##
+$(ACTION)/lint: $(call git_deps,\.([jt]sx?)$$)
+	-@$(call eslint,$?,$(ARGS))
+	@$(call done, $@)
+
+ACTIONS += test~lint ##
+$(ACTION)/test: $(call git_deps,\.([jt]sx?)$$)
+	-@$(call jest,$?,$(ARGS))
+	@$(call done, $@)
+
+EXPO_PORT ?= 8081
+.PHONY: dev +dev
+dev: | ~deps +dev ##
++dev:
+	@$(EXPO) start -c -p $(EXPO_PORT) $(ARGS)
+
+.PHONY: start@web +start@web
+start@web: | ~deps +start@web ##
++start@web:
+	@$(EXPO) start -c -p $(EXPO_PORT) --web $(ARGS)
+
+.PHONY: start@android +start@android
+start@android: | ~deps +start@android ##
++start@android:
+	@$(EXPO) start -c -p $(EXPO_PORT) --android $(ARGS)
+
+.PHONY: start@ios +start@ios
+start@ios: | ~deps start@ios ##
++start@ios:
+	@$(EXPO) start -c -p $(EXPO_PORT) --ios $(ARGS)
+
+.PHONY: clean
+clean: ##
+	-@$(MKCACHE_CLEAN)
+	-@$(JEST) --clearCache $(NOFAIL)
+	-@$(WATCHMAN) watch-del-all $(NOFAIL)
+	-@$(GIT) clean -fXd \
+		$(MKPM_GIT_CLEAN_FLAGS) \
+		$(YARN_GIT_CLEAN_FLAGS) \
+		$(NOFAIL)
+
+CACHE_ENVS += \
+
+-include $(call chain)
