@@ -1,95 +1,72 @@
-# Tamagui + Solito + Next + Expo Monorepo
+#### Multiplatform-Project-Template
+
+- Welcome to the repository for seamless multi-platform development!
+
+- This project provides a solid foundation for your cross-platform endeavors, supporting Storybook, Storybook Expo, Next.js, and Expo.
+
+- Kickstart your development with an optimized codebase and leverage Tamagui's Custom UI Components via the Multiplatform.one NPM package.
+
+#### Getting Started
+
+## Install Dependencies
 
 ```sh
-npm create tamagui
+    mkpm -i
 ```
 
-## 🔦 About
+- Run this command to install all the required packages and dependencies for the project.
 
-This monorepo is a starter for an Expo + Next.js + Tamagui + Solito app.
+- Now that you have installed the necessary dependencies, you're ready to explore and develop for different platforms using the commands below.
 
-Many thanks to [@FernandoTheRojo](https://twitter.com/fernandotherojo) for the Solito starter monorepo which this was forked from. Check out his [talk about using expo + next together at Next.js Conf 2021](https://www.youtube.com/watch?v=0lnbdRweJtA).
+- To explore and develop for different platforms, use the following commands:
 
-## 📦 Included packages
-
-- [Tamagui](https://tamagui.dev) 🪄
-- [solito](https://solito.dev) for cross-platform navigation
-- Expo SDK
-- Next.js
-- Expo Router
-
-## 🗂 Folder layout
-
-The main apps are:
-
-- `expo` (native)
-- `next` (web)
-
-- `packages` shared packages across apps
-  - `ui` includes your custom UI kit that will be optimized by Tamagui
-  - `app` you'll be importing most files from `app/`
-    - `screens` all the screens will display here
-    - `provider` (all the providers that wrap the app, and some no-ops for Web.)
-
-You can add other folders inside of `packages/` if you know what you're doing and have a good reason to.
-
-## 🏁 Start the app
-
-- Install dependencies: `yarn`
-
-- Next.js local dev: `yarn web`
-
-To run with optimizer on in dev mode (just for testing, it's faster to leave it off): `yarn web:extract`. To build for production `yarn web:prod`.
-
-To see debug output to verify the compiler, add `// debug` as a comment to the top of any file.
-
-- Expo local dev: `yarn native`
-
-## UI Kit
-
-Note we're following the [design systems guide](https://tamagui.dev/docs/guides/design-systems) and creating our own package for components.
-
-See `packages/ui` named `@my/ui` for how this works.
-
-## 🆕 Add new dependencies
-
-### Pure JS dependencies
-
-If you're installing a JavaScript-only dependency that will be used across platforms, install it in `packages/app`:
+## Storybook
 
 ```sh
-cd packages/app
-yarn add date-fns
-cd ../..
-yarn
+    ./mkpm storybook/dev
 ```
 
-### Native dependencies
+- Starts the Storybook environment, facilitating web development. Use this command to visualize and interact with your React components in isolation.
 
-If you're installing a library with any native code, you must install it in `expo`:
+## Storybook Expo (Native)
 
 ```sh
-cd apps/expo
-yarn add react-native-reanimated
-cd ..
-yarn
+    ./mkpm storybook-native/dev
 ```
 
-## Update new dependencies
+- Launches Storybook Expo, designed for native mobile development. It allows you to build and showcase your React Native components in an interactive environment.
 
-### Pure JS dependencies
+## Next.js
 
 ```sh
-yarn upgrade-interactive
+    ./mkpm next/dev
 ```
 
-You can also install the native library inside of `packages/app` if you want to get autoimport for that package inside of the `app` folder. However, you need to be careful and install the _exact_ same version in both packages. If the versions mismatch at all, you'll potentially get terrible bugs. This is a classic monorepo issue. I use `lerna-update-wizard` to help with this (you don't need to use Lerna to use that lib).
+- Runs Next.js, a framework for building server-rendered React applications. Ideal for creating dynamic and Search Engine Optimization(SEO)-friendly web pages.
 
-You may potentially want to have the native module transpiled for the next app. If you get error messages with `Cannot use import statement outside a module`, you may need to use `transpilePackages` in your `next.config.js` and add the module to the array there.
+## Expo
 
-### Deploying to Vercel
+```sh
+    ./mkpm expo/dev
+```
 
-- Root: `apps/next`
-- Install command to be `yarn set version stable && yarn install`
-- Build command: leave default setting
-- Output dir: leave default setting
+- Initiates the Expo development environment, streamlining the process of building React Native apps. It provides tools for development, testing, and deployment on multiple platforms.
+
+## API
+
+```sh
+    ./mkpm api/dev
+```
+
+- Starts the API development server. Use this command to run and test your backend server, enabling seamless communication between your front-end and back-end components.
+
+## Support
+
+- If You find any bugs in the project please file an issue here
+  [Click Here](https://gitlab.com/phani25/project-template/-/issues)
+
+## Conclusion
+
+- Explore limitless possibilities, experiment effortlessly, and craft exceptional multi-platform applications using our streamlined project template. Elevate your development experience with ease and efficiency. Your journey to building remarkable applications starts here!
+
+---------Please Star the Project If You Like It!!!!-----------
