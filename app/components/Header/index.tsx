@@ -29,9 +29,9 @@ export function Header() {
     <XStack
       width="100%"
       jc="space-between"
-      padding="$4"
+      padding="$3"
       height={100}
-      backgroundColor="$blue2Dark"
+      // backgroundColor="$blue2Dark"
       $theme-light={{ bg: '$purple5' }}
       elevation="$2"
     >
@@ -41,7 +41,7 @@ export function Header() {
             <LinkStack href="/">
               <SolitoImage src={fossLogo} alt="Logo" height={60} width={60} style={{ borderRadius: 9999 }} />
             </LinkStack>
-            <H3>SelfHosted-Cloud-UI</H3>
+            <H3 fontStyle="italic">K S R PHANI BHUSHAN</H3>
           </XStack>
         </YStack>
       )}
