@@ -50,7 +50,7 @@ $(ACTION)/export: $(call git_deps,\.([jt]sx?)$$)
 	@NEXT_STATIC=1 $(NEXT) export
 	@$(call done, $@)
 
-PORT ?= 3000
+PORT ?= 9999
 .PHONY: dev +dev
 dev: | ~deps +dev ##
 +dev:

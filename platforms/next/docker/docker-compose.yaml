@@ -13,7 +13,7 @@ services:
     image: ${IMAGE}:latest
     user: 0:0
     ports:
-      - 3000:3000
+      - 9999:9999
     environment:
       DEBUG: '1'
     depends_on:

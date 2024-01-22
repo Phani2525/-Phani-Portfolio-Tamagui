@@ -25,7 +25,7 @@ RUN chmod +x /usr/local/sbin/entrypoint
 
 ENTRYPOINT [ "/usr/local/sbin/entrypoint" ]
 
-EXPOSE 3000
+EXPOSE 9999
 
 ENV CONTAINER=1 \
     DEBUG=0
