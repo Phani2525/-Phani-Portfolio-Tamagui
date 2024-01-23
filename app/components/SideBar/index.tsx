@@ -50,7 +50,7 @@ export const SideBar = ({ ...props }: SideBarProps) => {
           About
         </Text>
       </LinkStack>
-      <LinkStack href="/services" jc="center" hoverStyle={{ backgroundColor: '$backgroundFocus', borderRadius: '$3' }}>
+      <LinkStack href="/service" jc="center" hoverStyle={{ backgroundColor: '$backgroundFocus', borderRadius: '$3' }}>
         <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'Services' */}
         <Text selectable={false} cursor="pointer">
           Services
