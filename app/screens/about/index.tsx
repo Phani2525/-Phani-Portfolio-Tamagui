@@ -4,16 +4,17 @@ import { Header } from 'app/components/Header';
 import { Fade, Slide } from 'react-reveal';
 
 const AboutScreen = () => {
-  const icon = require('app/assets/icon.png');
-  const jsIcon = require('app/assets/icon.png'); // Replace with the actual JavaScript icon
-  const htmlCssIcon = require('app/assets/icon.png'); // Replace with the actual HTML and CSS icon
-  const kubernetesIcon = require('app/assets/icon.png'); // Replace with the actual Kubernetes icon
-  const debianIcon = require('app/assets/icon.png'); // Replace with the actual Debian icon
-  const nextjsIcon = require('app/assets/icon.png'); // Replace with the actual Next.js icon
+  const TS = require('app/assets/TS.png');
+  const JS = require('app/assets/JS.png'); // Replace with the actual JavaScript icon
+  const HTML = require('app/assets/HTML.png'); // Replace with the actual HTML and CSS icon
+  const kubernetes = require('app/assets/kubernetes.png'); // Replace with the actual Kubernetes icon
+  const debian = require('app/assets/customdebian.png'); // Replace with the actual Debian icon
+  const nextjs = require('app/assets/next.png'); // Replace with the actual Next.js icon
   const media = useMedia();
+  const background = require('app/assets/background1.png');
 
   return (
-    <YStack fullscreen>
+    <YStack style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', minHeight: '100vh' }}>
       <Header />
       <ScrollView>
         {/* TypeScript Section */}
@@ -32,7 +33,7 @@ const AboutScreen = () => {
                 color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
-                style={{ fontSize: media.xs ? '14px' : '20px' }}
+                style={{ fontSize: media.xs ? '18px' : '26px' }}
                 marginBottom="$4"
               >
                 As a passionate developer, I specialize in TypeScript, leveraging its type system to build robust and
@@ -42,7 +43,7 @@ const AboutScreen = () => {
               <SimpleImage
                 width={400}
                 height={400}
-                src={icon}
+                src={TS}
                 marginLeft={media.xs ? 0 : '$10'}
                 marginRight={media.xs ? 0 : '$10'}
                 marginTop="$4"
@@ -68,7 +69,7 @@ const AboutScreen = () => {
                 color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
-                style={{ fontSize: media.xs ? '14px' : '20px' }}
+                style={{ fontSize: media.xs ? '18px' : '26px' }}
                 marginBottom="$4"
               >
                 With a strong foundation in JavaScript, I bring dynamic and interactive features to life. My expertise
@@ -77,7 +78,7 @@ const AboutScreen = () => {
               <SimpleImage
                 width={400}
                 height={400}
-                src={icon}
+                src={JS}
                 marginLeft={media.xs ? 0 : '$10'}
                 marginRight={media.xs ? 0 : '$10'}
                 marginTop="$4"
@@ -103,7 +104,7 @@ const AboutScreen = () => {
                 color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
-                style={{ fontSize: media.xs ? '14px' : '20px' }}
+                style={{ fontSize: media.xs ? '18px' : '26px' }}
                 marginBottom="$4"
               >
                 Proficient in crafting visually appealing and responsive user interfaces using HTML and CSS. My
@@ -113,7 +114,7 @@ const AboutScreen = () => {
               <SimpleImage
                 width={400}
                 height={400}
-                src={icon}
+                src={HTML}
                 marginLeft={media.xs ? 0 : '$10'}
                 marginRight={media.xs ? 0 : '$10'}
                 marginTop="$4"
@@ -139,7 +140,7 @@ const AboutScreen = () => {
                 color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
-                style={{ fontSize: media.xs ? '14px' : '20px' }}
+                style={{ fontSize: media.xs ? '18px' : '26px' }}
                 marginBottom="$4"
               >
                 Deeply experienced in orchestrating and managing containerized applications with Kubernetes. My skills
@@ -148,7 +149,7 @@ const AboutScreen = () => {
               <SimpleImage
                 width={400}
                 height={400}
-                src={icon}
+                src={kubernetes}
                 marginLeft={media.xs ? 0 : '$10'}
                 marginRight={media.xs ? 0 : '$10'}
                 marginTop="$4"
@@ -174,7 +175,7 @@ const AboutScreen = () => {
                 color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
-                style={{ fontSize: media.xs ? '14px' : '20px' }}
+                style={{ fontSize: media.xs ? '18px' : '26px' }}
                 marginBottom="$4"
               >
                 Passionate about customizing and optimizing Debian-based operating systems. My expertise in tailoring
@@ -183,7 +184,7 @@ const AboutScreen = () => {
               <SimpleImage
                 width={400}
                 height={400}
-                src={icon}
+                src={debian}
                 marginLeft={media.xs ? 0 : '$10'}
                 marginRight={media.xs ? 0 : '$10'}
                 marginTop="$4"
@@ -209,7 +210,7 @@ const AboutScreen = () => {
                 color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
-                style={{ fontSize: media.xs ? '14px' : '20px' }}
+                style={{ fontSize: media.xs ? '18px' : '26px' }}
                 marginBottom="$4"
               >
                 Proficient in building performant and scalable web applications with Next.js. Leveraging the power of
@@ -218,7 +219,7 @@ const AboutScreen = () => {
               <SimpleImage
                 width={400}
                 height={400}
-                src={icon}
+                src={nextjs}
                 marginLeft={media.xs ? 0 : '$10'}
                 marginRight={media.xs ? 0 : '$10'}
                 marginTop="$4"
