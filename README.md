@@ -1,5 +1,7 @@
 #### Multiplatform-Project-Template
 
+![Project Logo](./app/assets/portfolio.png)
+
 - Welcome to the repository for seamless multi-platform development!
 
 - This project provides a solid foundation for your cross-platform endeavors, supporting Storybook, Storybook Expo, Next.js, and Expo.
