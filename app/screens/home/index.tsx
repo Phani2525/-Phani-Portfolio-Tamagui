@@ -3,6 +3,7 @@ import React from 'react';
 import { YStack, XStack, Text, SimpleImage, Button, ScrollView, H3 } from 'ui'; // Assuming ScrollView is part of your UI library
 import { Header } from 'app/components/Header';
 import { Zoom } from 'react-reveal';
+import { LinkStack } from 'app/components/LinkStack';
 
 const HomeScreen = () => {
   const icon = require('app/assets/icon.png');
@@ -25,9 +26,12 @@ const HomeScreen = () => {
                 Growing React Native Developer | Expanding Skills in JavaScript and TypeScript for both Mobile and Web
                 Applications.
               </Text>
-              <Button>
-                <Text fontStyle="italic">About Me</Text>
-              </Button>
+
+              <LinkStack href="/about">
+                <Button>
+                  <Text fontStyle="italic">About Me</Text>
+                </Button>
+              </LinkStack>
             </YStack>
           </Zoom>
           <Zoom duration={800} delay={400}>

@@ -32,7 +32,7 @@ export const SettingsInfo = () => {
         success of your endeavors.
       </Text>
 
-      <LinkStack href="/contact" hoverStyle={{ backgroundColor: '$backgroundPress' }} paddingVertical="$3">
+      <LinkStack jc="center" href="/contact">
         <Button>Contact Now</Button>
       </LinkStack>
     </YStack>
