@@ -1,4 +1,4 @@
-#### Multiplatform-Project-Template
+#### Portfolio-Tamagui
 
 ![Project Logo](./app/assets/portfolio.png)
 
