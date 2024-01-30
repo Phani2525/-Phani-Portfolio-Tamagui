@@ -5,12 +5,12 @@ import { Header } from "app/components/Header";
 import { ArrowRight } from "@tamagui/lucide-icons";
 import { Fade } from 'react-reveal';
 
-import './PortfolioScreen.css'; // Import the CSS file
+import './PortfolioScreen.css'; 
 
 interface Project {
   name: string;
   description: string;
-  image: string; // Assuming image is a string representing the path
+  image: string;
   githubLink: string;
 }
 
@@ -19,20 +19,20 @@ const PortfolioScreen: React.FC = () => {
     {
       name: 'Project 1',
       description: 'Description of Project 1',
-      image: require('app/assets/icon.png'), // Replace with your actual image path
-      githubLink: 'https://github.com/Phani2525/project1',
+      image: require('app/assets/portfolio.png'), 
+      githubLink: 'https://github.com/Phani2525/-Phani-Portfolio-Tamagui',
     },
     {
       name: 'Project 1',
-      description: 'Description of Project 1',
-      image: require('app/assets/icon.png'),
-      githubLink: 'https://github.com/Phani2525/project1',
+      description: 'Description of Project 2',
+      image: require('app/assets/multiplatform.png'),
+      githubLink: 'https://github.com/Phani2525/-Multiplatform-Project-Template',
     },
     {
       name: 'Project 1',
-      description: 'Description of Project 1',
-      image: require('app/assets/icon.png'),
-      githubLink: 'https://github.com/Phani2525/project1',
+      description: 'Description of Project 3',
+      image: require('app/assets/experiancehub.png'),
+      githubLink: 'https://github.com/Phani2525/experiencehub',
     },
     {
       name: 'Project 1',
