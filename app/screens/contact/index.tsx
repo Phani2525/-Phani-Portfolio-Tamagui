@@ -28,7 +28,7 @@ const ContactScreen = () => {
           {/* Text and Buttons on the Right Side */}
           <YStack alignItems="center" space="$3" width="50%" padding="$4">
             <Slide right delay={300}>
-              <Text marginBottom="$10" fontSize={44} fontWeight="bold" textAlign="center">
+              <Text fontStyle='italic' marginBottom="$10" fontSize={44} fontWeight="bold" textAlign="center">
                 Contact Me
               </Text>
             </Slide>
@@ -88,8 +88,7 @@ const ContactScreen = () => {
 
             <Slide bottom delay={500}>
               <Text fontSize="$8" color="$white" marginTop="$2">
-                If you're interested in collaborating, have a project, or just want to say hi, feel free to drop me an
-                email!
+                If you're interested in collaborating, have a project, or just want to say hi, feel free to Contact Me...!!
               </Text>
             </Slide>
           </YStack>
