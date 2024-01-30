@@ -21,6 +21,7 @@ export const Settings = () => {
   const themeState = useThemeState();
   const media = useMedia();
   const [themeColors, setThemeColors] = useState(defaultColors);
+  const background = require('app/assets/background1.png');
 
   const mobileView = Platform.OS === 'android' || Platform.OS === 'ios' || media.xs;
 
@@ -65,7 +66,7 @@ export const Settings = () => {
   }
 
   return (
-    <YStack fullscreen>
+    <YStack fullscreen style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', minHeight: '100vh' }}>
       <Theme>
         <Header />
         <SimpleTabs
