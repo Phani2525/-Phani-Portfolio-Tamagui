@@ -10,7 +10,7 @@ import { SolitoImage } from 'solito/image';
 export function Header() {
   const [firstFetch, setFirstFetch] = React.useState(true);
   const media = useMedia();
-  const [fossLogo] = useAssets(require('app/assets/icon.png'));
+  const [Logo] = useAssets(require('app/assets/portfologo.png'));
   const isMobile = Platform.OS === 'android' || Platform.OS === 'ios';
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export function Header() {
         <YStack width="50%" $md={{ width: '30%' }}>
           <XStack ai="center">
             <LinkStack href="/">
-              <SolitoImage src={fossLogo} alt="Logo" height={60} width={60} style={{ borderRadius: 9999 }} />
+              <SolitoImage src={Logo} alt="Logo" height={60} width={60} style={{ borderRadius: 9999 }} />
             </LinkStack>
             <H3 fontStyle="italic">K S R PHANI BHUSHAN</H3>
           </XStack>
