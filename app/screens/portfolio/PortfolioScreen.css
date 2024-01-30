@@ -1,0 +1,22 @@
+.xStackContainer {
+    display: flex;
+    overflow-x: hidden;
+    animation: scrollAnimation 60s linear infinite 0s; /* Adjust the animation duration and delay based on your preference */
+  }
+  
+  .xStackContainer:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scrollAnimation {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  
+  
+  
