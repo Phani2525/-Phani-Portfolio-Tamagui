@@ -30,7 +30,6 @@ const AboutScreen = () => {
             >
               <Text
                 padding="$10"
-                color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
                 style={{ fontSize: media.xs ? '18px' : '26px' }}
@@ -66,7 +65,6 @@ const AboutScreen = () => {
             >
               <Text
                 padding="$7"
-                color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
                 style={{ fontSize: media.xs ? '18px' : '26px' }}
@@ -101,7 +99,6 @@ const AboutScreen = () => {
             >
               <Text
                 padding="$10"
-                color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
                 style={{ fontSize: media.xs ? '18px' : '26px' }}
@@ -137,7 +134,6 @@ const AboutScreen = () => {
             >
               <Text
                 padding="$7"
-                color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
                 style={{ fontSize: media.xs ? '18px' : '26px' }}
@@ -172,7 +168,6 @@ const AboutScreen = () => {
             >
               <Text
                 padding="$10"
-                color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
                 style={{ fontSize: media.xs ? '18px' : '26px' }}
@@ -207,7 +202,6 @@ const AboutScreen = () => {
             >
               <Text
                 padding="$7"
-                color="palegreen"
                 fontStyle="italic"
                 marginTop="$12"
                 style={{ fontSize: media.xs ? '18px' : '26px' }}
