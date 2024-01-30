@@ -14,7 +14,7 @@ const AboutScreen = () => {
   const background = require('app/assets/background1.png');
 
   return (
-    <YStack style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', minHeight: '100vh' }}>
+    <YStack style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }} fullscreen>
       <Header />
       <ScrollView>
         {/* TypeScript Section */}
