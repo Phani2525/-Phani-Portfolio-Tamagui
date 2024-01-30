@@ -7,9 +7,10 @@ import { LinkStack } from 'app/components/LinkStack';
 
 const HomeScreen = () => {
   const icon = require('app/assets/icon.png');
+  const background = require('app/assets/background1.png');
 
   return (
-    <YStack fullscreen>
+    <YStack fullscreen style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', minHeight: '100vh' }}>
       <Header />
       <ScrollView>
         <XStack justifyContent="space-between" padding={20}>
@@ -29,7 +30,9 @@ const HomeScreen = () => {
 
               <LinkStack href="/about">
                 <Button>
-                  <Text fontStyle="italic">About Me</Text>
+                  <Text fontSize={24} fontStyle="italic">
+                    About Me
+                  </Text>
                 </Button>
               </LinkStack>
             </YStack>
