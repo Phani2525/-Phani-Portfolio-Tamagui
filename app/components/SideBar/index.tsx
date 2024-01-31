@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import type { YStackProps } from 'ui';
 import { YStack, Text, SimplePopover, XStack, useMedia } from 'ui';
-import { AppWindow, LayoutDashboard, Sheet, Box, Settings, ChevronDown, ChevronUp } from '@tamagui/lucide-icons';
+import {
+  AppWindow,
+  LayoutDashboard,
+  Sheet,
+  Box,
+  Settings,
+  ChevronDown,
+  ChevronUp,
+  Contact2,
+} from '@tamagui/lucide-icons';
 import { Platform } from 'react-native';
 import { LinkStack } from 'app/components/LinkStack';
 
@@ -38,37 +47,37 @@ export const SideBar = ({ ...props }: SideBarProps) => {
 
   return (
     <YStack {...props}>
-      <LinkStack href="/" jc="center" hoverStyle={{ backgroundColor: '$backgroundFocus', borderRadius: '$3' }}>
+      <LinkStack href="/" jc="center" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
         <LayoutDashboard />
         <Text selectable={false} cursor="pointer">
           Home
         </Text>
       </LinkStack>
-      <LinkStack href="/about" jc="center" hoverStyle={{ backgroundColor: '$backgroundFocus', borderRadius: '$3' }}>
+      <LinkStack href="/about" jc="center" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
         <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'About' */}
         <Text selectable={false} cursor="pointer">
           About
         </Text>
       </LinkStack>
-      <LinkStack href="/service" jc="center" hoverStyle={{ backgroundColor: '$backgroundFocus', borderRadius: '$3' }}>
+      <LinkStack href="/service" jc="center" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
         <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'Services' */}
         <Text selectable={false} cursor="pointer">
           Services
         </Text>
       </LinkStack>
-      <LinkStack href="/portfolio" jc="center" hoverStyle={{ backgroundColor: '$backgroundFocus', borderRadius: '$3' }}>
+      <LinkStack href="/portfolio" jc="center" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
         <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'Portfolio' */}
         <Text selectable={false} cursor="pointer">
           Portfolio
         </Text>
       </LinkStack>
-      <LinkStack href="/contact" jc="center" hoverStyle={{ backgroundColor: '$backgroundFocus', borderRadius: '$3' }}>
-        <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'Contact' */}
+      <LinkStack href="/contact" jc="center" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
+        <Contact2 /> {/* You can replace this icon with the appropriate one for 'Contact' */}
         <Text selectable={false} cursor="pointer">
           Contact
         </Text>
       </LinkStack>
-      <LinkStack href="/settings" hoverStyle={{ backgroundColor: '$backgroundFocus', borderRadius: '$3' }}>
+      <LinkStack href="/settings" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
         <Settings />
         <Text selectable={false} cursor="pointer">
           Settings
