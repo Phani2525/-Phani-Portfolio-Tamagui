@@ -1,11 +1,10 @@
-// PortfolioScreen.tsx
-import React from "react";
+import React from 'react';
 import { YStack, Text, Card, SimpleImage, XStack, H2, ScrollView } from 'ui';
-import { Header } from "app/components/Header";
-import { ArrowRight } from "@tamagui/lucide-icons";
+import { Header } from 'app/components/Header';
+import { ArrowRight } from '@tamagui/lucide-icons';
 import { Fade } from 'react-reveal';
 
-import './PortfolioScreen.css'; 
+import './PortfolioScreen.css';
 
 interface Project {
   name: string;
@@ -17,59 +16,36 @@ interface Project {
 const PortfolioScreen: React.FC = () => {
   const projects: Project[] = [
     {
-      name: 'Project 1',
-      description: 'Description of Project 1',
-      image: require('app/assets/portfolio.png'), 
+      name: 'Phani s Portfolio',
+      description: 'A Bsasic Portfolio Website with Smooth Animations',
+      image: require('app/assets/portfolio.png'),
       githubLink: 'https://github.com/Phani2525/-Phani-Portfolio-Tamagui',
     },
     {
-      name: 'Project 1',
-      description: 'Description of Project 2',
+      name: 'Multiplatform Project',
+      description: 'A Multiplatform Project Template with React Native and React Web',
       image: require('app/assets/multiplatform.png'),
       githubLink: 'https://github.com/Phani2525/-Multiplatform-Project-Template',
     },
     {
-      name: 'Project 1',
-      description: 'Description of Project 3',
-      image: require('app/assets/experiancehub.png'),
+      name: 'Experience Hub',
+      description: 'An AI ChatBot Application ',
+      image: require('app/assets/AI.png'),
       githubLink: 'https://github.com/Phani2525/experiencehub',
     },
     {
-      name: 'Project 1',
-      description: 'Description of Project 1',
-      image: require('app/assets/icon.png'),
+      name: 'CyberCode-OS',
+      description: 'A Cyber Security Operating System for Software Developers',
+      image: require('app/assets/cyberOS.png'),
       githubLink: 'https://github.com/Phani2525/project1',
     },
     {
-      name: 'Project 1',
-      description: 'Description of Project 1',
-      image: require('app/assets/icon.png'),
+      name: 'GK-Creations',
+      description: 'A Local Business Website',
+      image: require('app/assets/GK.png'),
       githubLink: 'https://github.com/Phani2525/project1',
     },
-    {
-      name: 'Project 1',
-      description: 'Description of Project 1',
-      image: require('app/assets/icon.png'),
-      githubLink: 'https://github.com/Phani2525/project1',
-    },
-    {
-      name: 'Project 1',
-      description: 'Description of Project 1',
-      image: require('app/assets/icon.png'),
-      githubLink: 'https://github.com/Phani2525/project1',
-    },
-    {
-      name: 'Project 1',
-      description: 'Description of Project 1',
-      image: require('app/assets/icon.png'),
-      githubLink: 'https://github.com/Phani2525/project1',
-    },
-    {
-      name: 'Project 1',
-      description: 'Description of Project 1',
-      image: require('app/assets/icon.png'),
-      githubLink: 'https://github.com/Phani2525/project1',
-    },
+
     // Add more projects as needed
   ];
 
@@ -100,10 +76,24 @@ const PortfolioScreen: React.FC = () => {
                     {project.description}
                   </Text>
                   {/* GitHub Link within the card */}
-                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', backgroundColor: '$primary', color: '#fff', padding: '10px', borderRadius: '5px', cursor: 'pointer', marginTop: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Text fontSize={16}>
-                      View Project on GitHub
-                    </Text>
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      textDecoration: 'none',
+                      backgroundColor: '$primary',
+                      color: '#fff',
+                      padding: '10px',
+                      borderRadius: '5px',
+                      cursor: 'pointer',
+                      marginTop: '10px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Text fontSize={16}>View Project on GitHub</Text>
                     <ArrowRight size={20} color="#fff" style={{ marginLeft: '5px' }} />
                   </a>
                 </YStack>
