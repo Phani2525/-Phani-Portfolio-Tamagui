@@ -40,7 +40,15 @@ export const ServiceScreen = () => {
         <XStack marginTop="$8" space justifyContent="space-evenly">
           {services.map((service, index) => (
             <Fade key={index} duration={800} delay={index * 200}>
-              <Card backgroundColor="$gray7Dark" space="$1" width="400px" height="500px" margin="$2" padding="$5">
+              <Card
+                backgroundColor="$gray7Dark"
+                space="$1"
+                width="400px"
+                height="500px"
+                margin="$2"
+                padding="$5"
+                hoverStyle={{ transform: [{ scale: 1.1 }] }}
+              >
                 <SimpleImage src={service.image} style={{ width: '100%', height: '70%', borderRadius: '10px' }} />
                 <YStack jc="center" ai="center" marginTop="$2">
                   <Text fontStyle="italic" fontSize={28} fontWeight="bold">
