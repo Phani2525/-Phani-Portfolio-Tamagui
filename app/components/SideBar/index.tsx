@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React,  from 'react';
 import type { YStackProps } from 'ui';
-import { YStack, Text, SimplePopover, XStack, useMedia } from 'ui';
+import { YStack, Text,  useMedia } from 'ui';
 import {
-  AppWindow,
+
   LayoutDashboard,
-  Sheet,
-  Box,
+
   Settings,
-  ChevronDown,
-  ChevronUp,
+
   Contact2,
 } from '@tamagui/lucide-icons';
 import { Platform } from 'react-native';
@@ -18,32 +16,9 @@ type SideBarProps = YStackProps & {};
 
 export const SideBar = ({ ...props }: SideBarProps) => {
   const media = useMedia();
-  // const [showResources, setShowResources] = useState<boolean>(false);
   const mobileView = Platform.OS === 'ios' || Platform.OS === 'android' || media.xs;
 
-  // const handleToggleResources = () => {
-  //   setShowResources((prev) => !prev);
-  // };
-
-  // function renderResources() {
-  //   const x = mobileView ? 20 : 0;
-  //   return (
-  //     <YStack>
-  //       <LinkStack
-  //         href="/resources/images"
-  //         x={x}
-  //         hoverStyle={{ backgroundColor: '$backgroundPress' }}
-  //         paddingVertical="$3"
-  //       >
-  //         <Box />
-  //         <Text selectable={false} cur="pointer">
-  //           Images
-  //         </Text>
-  //       </LinkStack>
-  //       {/* Include other resource links as needed */}
-  //     </YStack>
-  //   );
-  // }
+ 
 
   return (
     <YStack {...props}>
@@ -54,25 +29,25 @@ export const SideBar = ({ ...props }: SideBarProps) => {
         </Text>
       </LinkStack>
       <LinkStack href="/about" jc="center">
-        <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'About' */}
+        <LayoutDashboard /> 
         <Text selectable={false} cursor="pointer">
           About
         </Text>
       </LinkStack>
       <LinkStack href="/service" jc="center">
-        <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'Services' */}
+        <LayoutDashboard /> 
         <Text selectable={false} cursor="pointer">
           Services
         </Text>
       </LinkStack>
       <LinkStack href="/portfolio" jc="center">
-        <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'Portfolio' */}
+        <LayoutDashboard /> 
         <Text selectable={false} cursor="pointer">
           Portfolio
         </Text>
       </LinkStack>
       <LinkStack href="/contact" jc="center">
-        <Contact2 /> {/* You can replace this icon with the appropriate one for 'Contact' */}
+        <Contact2 />
         <Text selectable={false} cursor="pointer">
           Contact
         </Text>
