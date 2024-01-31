@@ -47,37 +47,37 @@ export const SideBar = ({ ...props }: SideBarProps) => {
 
   return (
     <YStack {...props}>
-      <LinkStack href="/" jc="center" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
+      <LinkStack href="/" jc="center">
         <LayoutDashboard />
         <Text selectable={false} cursor="pointer">
           Home
         </Text>
       </LinkStack>
-      <LinkStack href="/about" jc="center" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
+      <LinkStack href="/about" jc="center">
         <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'About' */}
         <Text selectable={false} cursor="pointer">
           About
         </Text>
       </LinkStack>
-      <LinkStack href="/service" jc="center" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
+      <LinkStack href="/service" jc="center">
         <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'Services' */}
         <Text selectable={false} cursor="pointer">
           Services
         </Text>
       </LinkStack>
-      <LinkStack href="/portfolio" jc="center" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
+      <LinkStack href="/portfolio" jc="center">
         <LayoutDashboard /> {/* You can replace this icon with the appropriate one for 'Portfolio' */}
         <Text selectable={false} cursor="pointer">
           Portfolio
         </Text>
       </LinkStack>
-      <LinkStack href="/contact" jc="center" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
+      <LinkStack href="/contact" jc="center">
         <Contact2 /> {/* You can replace this icon with the appropriate one for 'Contact' */}
         <Text selectable={false} cursor="pointer">
           Contact
         </Text>
       </LinkStack>
-      <LinkStack href="/settings" hoverStyle={{ backgroundColor: 'brown', borderRadius: '$3' }}>
+      <LinkStack href="/settings">
         <Settings />
         <Text selectable={false} cursor="pointer">
           Settings
