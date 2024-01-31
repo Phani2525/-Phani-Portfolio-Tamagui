@@ -1,4 +1,3 @@
-// HomeScreen.js
 import React from 'react';
 import { YStack, XStack, Text, SimpleImage, Button, ScrollView, H3 } from 'ui'; // Assuming ScrollView is part of your UI library
 import { Header } from 'app/components/Header';
@@ -16,10 +15,10 @@ const HomeScreen = () => {
         <XStack justifyContent="space-between" padding={20}>
           <Zoom duration={800} delay={200}>
             <YStack marginTop="$20" ai="center" space="$6">
-              <H3 fontSize="$10" fontWeight="700" fontStyle="italic">
+              <H3 color="darkgoldenrod" fontSize="$10" fontWeight="700" fontStyle="italic">
                 I'm
               </H3>
-              <H3 fontSize="$12" fontStyle="italic">
+              <H3 fontSize="$12" color="lightseagreen" fontStyle="italic">
                 {' '}
                 K.S.R PHANI BHUSHAN
               </H3>
@@ -29,7 +28,10 @@ const HomeScreen = () => {
               </Text>
 
               <LinkStack href="/about">
-                <Button>
+                <Button
+                  backgroundColor="firebrick"
+                  hoverStyle={{ backgroundColor: 'firebrick', transform: [{ scale: 1.1 }] }}
+                >
                   <Text fontSize={24} fontStyle="italic">
                     About Me
                   </Text>
