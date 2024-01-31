@@ -8,7 +8,6 @@ const HomeScreen = () => {
   const icon = require('app/assets/icon.png');
   const background = require('app/assets/background1.png');
 
-  // Replace this link with the actual link to your hosted resume file
   const resumeFileLink = 'https://drive.google.com/uc?id=1RSUJK6mC0yZMLmGEWbkcDz1XzwRVG0oY';
 
   const handleDownloadClick = () => {
