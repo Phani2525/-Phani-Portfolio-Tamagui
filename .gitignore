@@ -1,44 +1,46 @@
-# mkpm
-.mkpm/mkpm
-
-# app
-*.db
-*.pyc
-.env
-/env
-node_modules
-sql_app.db
-
-# node
-**/.expo/*
-**/.next/*
-*.tsbuildinfo
-.DS_Store
-.env
-.env.development.local
-.env.local
-.env.production.local
-.env.test.local
-.graphqlconfig
-.idea
-.pnpm-debug.log*
-.tamagui
-.vercel
+**/node_modules
 .yarn/*
-/build
-/node_modules
-/out/
-THUMBS_DB
-graphql.config.*
-npm-debug.log*
-schema.graphql
-thumbs.db
-turbo-build.log
-yarn-debug.log*
-yarn-error.log*
-!.yarn/cache
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# expo
+**/.expo/*
+
+# next.js
+**/.next/*
+/out/
+
+# tamagui
+**/.tamagui/*
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+
+# os
+.DS_Store
+THUMBS_DB
+thumbs.db
+
+# turbo build log
+**/.turbo/*
