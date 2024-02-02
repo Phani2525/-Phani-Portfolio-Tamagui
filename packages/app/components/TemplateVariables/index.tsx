@@ -23,7 +23,7 @@ export const TemplateVariables = (Props: TemplateVariableProps) => {
   return (
     <YStack space p="$4">
       <XStack jc="flex-end" ai="center" space>
-        <Plus onClick={addVariable} size="$4" />
+        <Plus onPress={addVariable} size="$4" />
       </XStack>
       {variables.map((variable) => (
         <XStack p="$3" space key={variable.id} width="100%" ai="center" jc="space-evenly">
@@ -34,7 +34,7 @@ export const TemplateVariables = (Props: TemplateVariableProps) => {
             width="40%"
           />
           <YStack bw={1} cursor="pointer" p={2} ai="center" jc="flex-end">
-            <Minus onClick={() => removeVariable(variable.id)} />
+            <Minus onPress={() => removeVariable(variable.id)} />
           </YStack>
         </XStack>
       ))}

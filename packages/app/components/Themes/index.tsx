@@ -127,7 +127,7 @@ export const Themes = ({ onThemeChange, theme }: Props) => {
               <XStack ai="center" key={index}>
                 <Button
                   br={0}
-                  onClick={() => selectColorType(color)}
+                  onPress={() => selectColorType(color)}
                   style={{ backgroundColor: themeColors[color] }}
                 >
                   <Text>{color}</Text>
@@ -150,7 +150,7 @@ export const Themes = ({ onThemeChange, theme }: Props) => {
             )}
           </XStack>
           <XStack space>
-            <Button style={primaryStyle} onClick={getAlert}>
+            <Button style={primaryStyle} onPress={getAlert}>
               SET
             </Button>
             <Button style={secondaryStyle}>RESET</Button>
