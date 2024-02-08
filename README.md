@@ -1,5 +1,9 @@
 # Tamagui + Solito + Next + Expo Monorepo
 
+# Welcome To Phani-Portfolio-Tamagui
+
+![Project Logo](packages/app/assets/portfolio.png)
+
 ```sh
 npm create tamagui
 ```
