@@ -52,7 +52,7 @@ const HomeScreen = () => {
 
               {/* Download CV Button */}
               <Button
-                onClick={handleDownloadClick}
+                onPress={handleDownloadClick}
                 backgroundColor="seagreen"
                 marginTop="$4"
                 hoverStyle={{ backgroundColor: 'seagreen', transform: [{ scale: 1.1 }] }}
@@ -64,7 +64,7 @@ const HomeScreen = () => {
             </YStack>
           </Zoom>
           <Zoom duration={800} delay={400}>
-            <SimpleImage src={icon} width={900} height={800} />
+            <SimpleImage src={icon} width={800} height={800} />
           </Zoom>
         </XStack>
       </ScrollView>
