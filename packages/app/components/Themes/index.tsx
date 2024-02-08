@@ -16,7 +16,6 @@ import {
   Theme,
 } from 'ui'
 import { SketchPicker } from 'react-color'
-import { useThemeState } from 'app/state/theme'
 // import { addTheme, updateTheme,replaceTheme } from '@tamagui/theme';
 
 interface Props {
@@ -38,12 +37,6 @@ export const Themes = ({ onThemeChange, theme }: Props) => {
   const [selectedColor, setSelectedColor] = useState('#fff')
   const [activeColorType, setActiveColorType] = useState('')
   const update = useForceUpdate()
-  const themeState = useThemeState()
-
-  const handleThemeChange = (newRootTheme, newSubTheme) => {
-    themeState.setRoot(newRootTheme)
-    themeState.setSub(newSubTheme)
-  }
 
   useEffect(() => {
     if (!onThemeChange) return
@@ -125,11 +118,7 @@ export const Themes = ({ onThemeChange, theme }: Props) => {
           <XStack ai="center" p="$3">
             {Object.keys(defaultColors).map((color, index) => (
               <XStack ai="center" key={index}>
-                <Button
-                  br={0}
-                  onPress={() => selectColorType(color)}
-                  style={{ backgroundColor: themeColors[color] }}
-                >
+                <Button br={0} style={{ backgroundColor: themeColors[color] }}>
                   <Text>{color}</Text>
                 </Button>
               </XStack>

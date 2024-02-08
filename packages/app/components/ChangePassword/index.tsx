@@ -32,7 +32,7 @@ export const ChangePassword = (props: YStackProps) => {
               secureTextEntry={showChangePassword}
             />
 
-            <Button onPress={togglePasswordVisibility}>
+            <Button onClick={togglePasswordVisibility}>
               {showChangePassword ? <EyeOff /> : <Eye />}{' '}
             </Button>
           </XStack>

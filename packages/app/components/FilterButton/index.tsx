@@ -40,7 +40,7 @@ export const FilterButton: React.FC<FilterButtonProps> = ({ onFiltersChange }) =
         <XStack animation="lazy" enterStyle={{ y: 50 }} space key={option.value}>
           <Checkbox
             checked={selectedFilters.includes(option.value)}
-            onPress={() => toggleFilter(option.value)}
+            onClick={() => toggleFilter(option.value)}
           >
             <Checkbox.Indicator>
               <Check />

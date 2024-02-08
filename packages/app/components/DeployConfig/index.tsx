@@ -29,7 +29,7 @@ export const DeployConfig: React.FC<DeployConfigProps> = () => {
               <Input w="70%" placeholder="Enter command" />
               <Minus
                 size={40}
-                onPress={() => {
+                onClick={() => {
                   const newInputs = [...commandInputs]
                   newInputs.splice(idx, 1)
                   setCommandInputs(newInputs)

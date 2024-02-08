@@ -5,8 +5,6 @@ import { SettingsInfo } from 'app/components/SettingsInfo'
 import { Themes } from 'app/components/Themes'
 import { SimpleTabs, TabsContent } from 'app/components/Tabs'
 import { Header } from 'app/components/Header'
-import type { ColorScheme } from 'app/state/theme'
-import { useThemeState } from 'app/state/theme'
 import { Platform } from 'react-native'
 import { UserInfo } from 'app/components/UserInfo'
 
@@ -18,7 +16,6 @@ export const Settings = () => {
     FOREGROUND: '#343a40',
     TABS: '#17a2b8',
   }
-  const themeState = useThemeState()
   const media = useMedia()
   const [themeColors, setThemeColors] = useState(defaultColors)
   const background = require('app/assets/background1.png')
@@ -28,10 +25,6 @@ export const Settings = () => {
   const foregroundStyle = {
     color: themeColors.FOREGROUND,
     borderColor: themeColors.FOREGROUND,
-  }
-
-  function handleThemeChange(theme: ColorScheme) {
-    themeState.setRoot(theme)
   }
 
   function renderTabs() {
@@ -88,7 +81,7 @@ export const Settings = () => {
               <SettingsInfo />
             </TabsContent>
             <TabsContent value="theme">
-              <Themes onThemeChange={handleThemeChange} theme={themeState.root} />
+              <Themes />
             </TabsContent>
             <TabsContent value="Admin Info">
               <UserInfo />

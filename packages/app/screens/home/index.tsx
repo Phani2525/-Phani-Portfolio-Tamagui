@@ -52,7 +52,7 @@ const HomeScreen = () => {
 
               {/* Download CV Button */}
               <Button
-                onPress={handleDownloadClick}
+                onClick={handleDownloadClick}
                 backgroundColor="seagreen"
                 marginTop="$4"
                 hoverStyle={{ backgroundColor: 'seagreen', transform: [{ scale: 1.1 }] }}
