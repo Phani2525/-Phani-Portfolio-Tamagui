@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, H3, Paragraph, XStack, YStack, Text } from 'ui/src';
-import { Mail, Github, Gitlab, Linkedin } from '@tamagui/lucide-icons';
+import { Mail, Github, Gitlab, Linkedin, Space } from '@tamagui/lucide-icons';
 import { Zoom, Bounce, Slide } from 'react-reveal';
 
 export function UserInfo() {
@@ -27,15 +27,16 @@ export function UserInfo() {
         <Zoom>
           <XStack space="$6" jc="flex-start" ai="center" m="$4">
             <Bounce>
-              <Text fontSize="$11" fontFamily="$buffaloWestern">
+              <Paragraph fontSize="$8" fontStyle='italic'>
                 This Website is Developed and Maintained By K.S.R PHANI BHUSHAN
-              </Text>
+              </Paragraph>
             </Bounce>
           </XStack>
         </Zoom>
         <Slide right>
-          <Paragraph fontSize="$10" mb="$4" fontStyle="italic" fontFamily="$ifcWildRodeo">
-            If there are any issues, please reach out to my mail: {developerEmail}
+          <Paragraph fontWeight='700' fontSize="$8" fontStyle="italic" >
+            If there are any issues, please Try reach out to My Mail:{developerEmail}
+           
           </Paragraph>
         </Slide>
         <Zoom>
@@ -46,18 +47,19 @@ export function UserInfo() {
               </H3>
             </Bounce>
             <Slide left>
-              <Button onPress={() => openLink('https://gitlab.com/phani25')}>
-                <Gitlab /> GitLab
+              <Button bg='peru' onPress={() => openLink('https://gitlab.com/phani25')}>
+                <Gitlab /><Text fontSize='$6' fontWeight='500' fontStyle='italic'> GitLab </Text>
               </Button>
             </Slide>
             <Slide right>
-              <Button onPress={() => openLink('https://github.com/Phani2525')}>
-                <Github /> GitHub
+              <Button bg='peru' onPress={() => openLink('https://github.com/Phani2525')}>
+                <Github /> <Text fontSize='$6' fontWeight='500' fontStyle='italic'>GitHub</Text> 
               </Button>
             </Slide>
             <Slide left>
-              <Button onPress={() => openLink('https://www.linkedin.com/in/phani-bhushan-131b1327a/')}>
-                <Linkedin /> LinkedIn
+                <Button bg='peru' onPress={() => openLink('https://www.linkedin.com/in/phani-bhushan-131b1327a/')}>
+                <Linkedin /><Text fontSize='$6' fontWeight='500' fontStyle='italic'>LinkedIn
+                </Text>
               </Button>
             </Slide>
           </XStack>

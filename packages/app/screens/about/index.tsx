@@ -1,7 +1,8 @@
 import React from 'react'
-import { YStack, XStack, Text, useMedia, SimpleImage, ScrollView } from 'ui'
+import { YStack, XStack, Text, useMedia, ScrollView, H2 } from 'ui'
 import { Header } from 'app/components/Header'
 import { Fade, Slide } from 'react-reveal'
+import { SolitoImage } from 'solito/image'
 
 const AboutScreen = () => {
   const TS = require('app/assets/TS.png')
@@ -16,17 +17,20 @@ const AboutScreen = () => {
   return (
     <YStack style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }} fullscreen>
       <Header />
-      <ScrollView>
+      <ScrollView><H2 marginTop='$4.5' alignSelf='center' fontSize='$10' fontStyle='italic'>A Bit About My Self</H2>
         {/* TypeScript Section */}
         <Fade>
+          
           <Slide left>
             <XStack
               flexDirection={media.xs ? 'column' : 'row'}
-              marginTop="$19"
+              marginTop="$10"
               space="$4"
               alignItems={media.xs ? 'center' : 'flex-start'}
               borderBottomWidth="$0.25"
               width="100%"
+             
+              paddingRight='$8'
             >
               <Text
                 padding="$10"
@@ -40,14 +44,12 @@ const AboutScreen = () => {
                 reliability and scalability of my projects, fostering a seamless development
                 experience.
               </Text>
-              <SimpleImage
+              <SolitoImage
                 width={400}
                 height={400}
                 src={TS}
-                marginLeft={media.xs ? 0 : '$10'}
-                marginRight={media.xs ? 0 : '$10'}
-                marginTop="$4"
-                marginBottom="$10"
+                alt="TypeScript Icon"
+                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
               />
             </XStack>
           </Slide>
@@ -63,7 +65,10 @@ const AboutScreen = () => {
               alignItems={media.xs ? 'center' : 'flex-start'}
               borderBottomWidth="$0.25"
               width="100%"
-            >
+              paddingLeft='$8'
+             
+             
+>
               <Text
                 padding="$7"
                 fontStyle="italic"
@@ -75,14 +80,12 @@ const AboutScreen = () => {
                 life. My expertise in modern JavaScript frameworks empowers me to create engaging
                 and user-friendly web applications.
               </Text>
-              <SimpleImage
+              <SolitoImage
                 width={400}
                 height={400}
                 src={JS}
-                marginLeft={media.xs ? 0 : '$10'}
-                marginRight={media.xs ? 0 : '$10'}
-                marginTop="$4"
-                marginBottom="$10"
+                alt="JavaScript Icon"
+                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
               />
             </XStack>
           </Slide>
@@ -98,6 +101,7 @@ const AboutScreen = () => {
               alignItems={media.xs ? 'center' : 'flex-start'}
               borderBottomWidth="$0.25"
               width="100%"
+              paddingRight="$8" // Changed paddingX to padding
             >
               <Text
                 padding="$10"
@@ -110,14 +114,12 @@ const AboutScreen = () => {
                 and CSS. My attention to design principles ensures a delightful user experience
                 across different devices and screen sizes.
               </Text>
-              <SimpleImage
+              <SolitoImage
                 width={400}
                 height={400}
                 src={HTML}
-                marginLeft={media.xs ? 0 : '$10'}
-                marginRight={media.xs ? 0 : '$10'}
-                marginTop="$4"
-                marginBottom="$10"
+                alt="HTML and CSS Icon"
+                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
               />
             </XStack>
           </Slide>
@@ -133,6 +135,7 @@ const AboutScreen = () => {
               alignItems={media.xs ? 'center' : 'flex-start'}
               borderBottomWidth="$0.25"
               width="100%"
+              paddingLeft="$8" // Changed paddingX to padding
             >
               <Text
                 padding="$7"
@@ -145,14 +148,12 @@ const AboutScreen = () => {
                 Kubernetes. My skills in containerization contribute to scalable and efficient
                 deployment strategies.
               </Text>
-              <SimpleImage
+              <SolitoImage
                 width={400}
                 height={400}
                 src={kubernetes}
-                marginLeft={media.xs ? 0 : '$10'}
-                marginRight={media.xs ? 0 : '$10'}
-                marginTop="$4"
-                marginBottom="$10"
+                alt="Kubernetes Icon"
+                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
               />
             </XStack>
           </Slide>
@@ -168,6 +169,7 @@ const AboutScreen = () => {
               alignItems={media.xs ? 'center' : 'flex-start'}
               borderBottomWidth="$0.25"
               width="100%"
+              paddingRight="$8" // Changed paddingX to padding
             >
               <Text
                 padding="$10"
@@ -180,14 +182,12 @@ const AboutScreen = () => {
                 expertise in tailoring operating systems ensures a tailored and secure environment
                 for various applications and purposes.
               </Text>
-              <SimpleImage
+              <SolitoImage
                 width={400}
                 height={400}
                 src={debian}
-                marginLeft={media.xs ? 0 : '$10'}
-                marginRight={media.xs ? 0 : '$10'}
-                marginTop="$4"
-                marginBottom="$10"
+                alt="Debian Icon"
+                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
               />
             </XStack>
           </Slide>
@@ -203,6 +203,7 @@ const AboutScreen = () => {
               alignItems={media.xs ? 'center' : 'flex-start'}
               borderBottomWidth="$0.25"
               width="100%"
+              paddingLeft="$8" // Changed paddingX to padding
             >
               <Text
                 padding="$7"
@@ -215,14 +216,12 @@ const AboutScreen = () => {
                 Leveraging the power of server-side rendering and a component-based architecture to
                 create seamless user experiences.
               </Text>
-              <SimpleImage
+              <SolitoImage
                 width={400}
                 height={400}
                 src={nextjs}
-                marginLeft={media.xs ? 0 : '$10'}
-                marginRight={media.xs ? 0 : '$10'}
-                marginTop="$4"
-                marginBottom="$10"
+                alt="Next.js Icon"
+                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
               />
             </XStack>
           </Slide>
@@ -233,3 +232,5 @@ const AboutScreen = () => {
 }
 
 export default AboutScreen
+
+

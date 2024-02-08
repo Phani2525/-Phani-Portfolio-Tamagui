@@ -3,6 +3,7 @@ import { YStack, XStack, Text, SimpleImage, Button, ScrollView, H3 } from 'ui'
 import { Header } from 'app/components/Header'
 import { Zoom } from 'react-reveal'
 import { LinkStack } from 'app/components/LinkStack'
+import { SolitoImage } from 'solito/image'
 
 const HomeScreen = () => {
   const icon = require('app/assets/icon.png')
@@ -63,9 +64,7 @@ const HomeScreen = () => {
               </Button>
             </YStack>
           </Zoom>
-          <Zoom duration={800} delay={400}>
-            <SimpleImage src={icon} width={800} height={800} />
-          </Zoom>
+          <SolitoImage src={icon} width={800} height={800} alt="Solito Image" />
         </XStack>
       </ScrollView>
     </YStack>

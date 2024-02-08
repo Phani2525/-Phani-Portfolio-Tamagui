@@ -1,8 +1,9 @@
 import React from 'react'
-import { YStack, Text, Button, SimpleImage, XStack, ScrollView } from 'ui'
+import { YStack, Text, Button,  XStack, ScrollView } from 'ui'
 import { Header } from 'app/components/Header'
 import { Linkedin, Github, Gitlab, Mail } from '@tamagui/lucide-icons'
 import Slide from 'react-reveal/Slide'
+import { SolitoImage } from 'solito/image'
 
 const ContactScreen = () => {
   const openLinkInNewTab = (url) => {
@@ -25,7 +26,7 @@ const ContactScreen = () => {
       <ScrollView>
         <XStack space="$4" alignItems="center" justifyContent="center" width="100%" height="100%">
           <Slide top>
-            <SimpleImage src={contactImage} width={750} height={800} />
+            <SolitoImage src={contactImage} alt="Contact Image" width={750} height={800} />
           </Slide>
 
           {/* Text and Buttons on the Right Side */}
@@ -51,7 +52,7 @@ const ContactScreen = () => {
               <Button
                 onPress={() => openLinkInNewTab('https://github.com/Phani2525')}
                 width="200px"
-                backgroundColor="$blue"
+               
               >
                 <Github size={24} color="white" />
                 <Text fontSize="$5" color="$white" marginLeft="$1">
@@ -64,7 +65,6 @@ const ContactScreen = () => {
               <Button
                 onPress={() => openLinkInNewTab('https://gitlab.com/phani25')}
                 width="200px"
-                backgroundColor="$green"
               >
                 <Gitlab size={24} color="white" />
                 <Text fontSize="$5" color="$white" marginLeft="$1">
@@ -79,7 +79,6 @@ const ContactScreen = () => {
                   openLinkInNewTab('https://www.linkedin.com/in/phani-bhushan-131b1327a/')
                 }
                 width="200px"
-                backgroundColor="$blue"
               >
                 <Linkedin size={24} color="white" />
                 <Text fontSize="$5" color="$white" marginLeft="$1">
@@ -92,7 +91,6 @@ const ContactScreen = () => {
               <Button
                 onPress={() => openEmailClient('kotharuphani@gmail.com')}
                 width="200px"
-                backgroundColor="$red"
               >
                 <Mail size={24} color="white" />
                 <Text fontSize="$5" color="$white" marginLeft="$1">

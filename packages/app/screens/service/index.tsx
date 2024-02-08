@@ -1,7 +1,8 @@
 import React from 'react'
-import { YStack, Text, Card, SimpleImage, XStack, H2, ScrollView } from 'ui'
+import { YStack, Text, Card, XStack, H2, ScrollView } from 'ui'
 import { Header } from 'app/components/Header'
 import { Fade } from 'react-reveal'
+import { SolitoImage } from 'solito/image'
 
 export const ServiceScreen = () => {
   const services = [
@@ -52,9 +53,10 @@ export const ServiceScreen = () => {
                 padding="$5"
                 hoverStyle={{ transform: [{ scale: 1.1 }] }}
               >
-                <SimpleImage
+                <SolitoImage
                   src={service.image}
-                  style={{ width: '100%', height: '70%', borderRadius: '10px' }}
+                  alt={service.name}
+                  style={{ width: '100%', height: '70%', borderRadius: 10 }}
                 />
                 <YStack jc="center" ai="center" marginTop="$2">
                   <Text fontStyle="italic" fontSize={28} fontWeight="bold">

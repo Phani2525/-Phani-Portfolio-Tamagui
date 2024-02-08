@@ -1,9 +1,9 @@
 import React from 'react'
-import { YStack, Text, Card, SimpleImage, XStack, H2, ScrollView } from 'ui'
+import { YStack, Text, Card, XStack, H2, ScrollView } from 'ui' // Changed SimpleImage to SolitoImage
 import { Header } from 'app/components/Header'
 import { ArrowRight } from '@tamagui/lucide-icons'
 import { Fade } from 'react-reveal'
-
+import { SolitoImage } from 'solito/image'
 import './PortfolioScreen.css'
 
 interface Project {
@@ -77,9 +77,10 @@ const PortfolioScreen: React.FC = () => {
                 margin="$2"
                 padding="$5"
               >
-                <SimpleImage
-                  src={project.image}
-                  style={{ width: '100%', height: '70%', borderRadius: '10px' }}
+                <SolitoImage
+                  src={project.image as any}
+                  alt={project.name} // Add alt attribute with project name
+                  style={{ width: '100%', height: '70%', borderRadius: 10 }}
                 />
                 <YStack jc="center" ai="center" marginTop="$2">
                   <Text fontStyle="italic" fontSize={28} fontWeight="bold">
