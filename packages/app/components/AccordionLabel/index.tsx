@@ -2,6 +2,8 @@ import { Text, XStack } from 'ui'
 import React from 'react'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 
+
+// props
 interface AccordionLabelProps {
   status?: string
   image?: string
