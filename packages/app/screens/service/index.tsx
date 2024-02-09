@@ -41,7 +41,7 @@ export const ServiceScreen = () => {
         <H2 marginTop="$6" space fontSize={40} alignSelf="center">
           <Text fontStyle="italic">My Services</Text>
         </H2>
-        <XStack marginTop="$8" space justifyContent="space-evenly">
+        <XStack marginTop="$8" space jc="space-evenly">
           {services.map((service, index) => (
             <Fade key={index} duration={800} delay={index * 200}>
               <Card
