@@ -6,21 +6,23 @@ import { SolitoImage } from 'solito/image'
 
 const AboutScreen = () => {
   const TS = require('app/assets/TS.png')
-  const JS = require('app/assets/JS.png') // Replace with the actual JavaScript icon
-  const HTML = require('app/assets/HTML.png') // Replace with the actual HTML and CSS icon
-  const kubernetes = require('app/assets/kubernetes.png') // Replace with the actual Kubernetes icon
-  const debian = require('app/assets/customdebian.png') // Replace with the actual Debian icon
-  const nextjs = require('app/assets/next.png') // Replace with the actual Next.js icon
+  const JS = require('app/assets/JS.png')
+  const HTML = require('app/assets/HTML.png')
+  const kubernetes = require('app/assets/kubernetes.png')
+  const debian = require('app/assets/customdebian.png')
+  const nextjs = require('app/assets/next.png')
   const media = useMedia()
   const background = require('app/assets/background1.png')
 
   return (
     <YStack style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }} fullscreen>
       <Header />
-      <ScrollView><H2 marginTop='$4.5' alignSelf='center' fontSize='$10' fontStyle='italic'>A Bit About My Self</H2>
+      <ScrollView>
+        <H2 marginTop="$4.5" alignSelf="center" fontSize="$10" fontStyle="italic">
+          A Bit About My Self
+        </H2>
         {/* TypeScript Section */}
         <Fade>
-          
           <Slide left>
             <XStack
               flexDirection={media.xs ? 'column' : 'row'}
@@ -29,8 +31,7 @@ const AboutScreen = () => {
               alignItems={media.xs ? 'center' : 'flex-start'}
               borderBottomWidth="$0.25"
               width="100%"
-             
-              paddingRight='$8'
+              paddingRight="$8"
             >
               <Text
                 padding="$10"
@@ -49,7 +50,12 @@ const AboutScreen = () => {
                 height={400}
                 src={TS}
                 alt="TypeScript Icon"
-                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
+                style={{
+                  marginLeft: media.xs ? 0 : '$10',
+                  marginRight: media.xs ? 0 : '$10',
+                  marginTop: '$4',
+                  marginBottom: '$10',
+                }}
               />
             </XStack>
           </Slide>
@@ -65,10 +71,8 @@ const AboutScreen = () => {
               alignItems={media.xs ? 'center' : 'flex-start'}
               borderBottomWidth="$0.25"
               width="100%"
-              paddingLeft='$8'
-             
-             
->
+              paddingLeft="$8"
+            >
               <Text
                 padding="$7"
                 fontStyle="italic"
@@ -85,7 +89,12 @@ const AboutScreen = () => {
                 height={400}
                 src={JS}
                 alt="JavaScript Icon"
-                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
+                style={{
+                  marginLeft: media.xs ? 0 : '$10',
+                  marginRight: media.xs ? 0 : '$10',
+                  marginTop: '$4',
+                  marginBottom: '$10',
+                }}
               />
             </XStack>
           </Slide>
@@ -119,7 +128,12 @@ const AboutScreen = () => {
                 height={400}
                 src={HTML}
                 alt="HTML and CSS Icon"
-                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
+                style={{
+                  marginLeft: media.xs ? 0 : '$10',
+                  marginRight: media.xs ? 0 : '$10',
+                  marginTop: '$4',
+                  marginBottom: '$10',
+                }}
               />
             </XStack>
           </Slide>
@@ -153,7 +167,12 @@ const AboutScreen = () => {
                 height={400}
                 src={kubernetes}
                 alt="Kubernetes Icon"
-                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
+                style={{
+                  marginLeft: media.xs ? 0 : '$10',
+                  marginRight: media.xs ? 0 : '$10',
+                  marginTop: '$4',
+                  marginBottom: '$10',
+                }}
               />
             </XStack>
           </Slide>
@@ -187,7 +206,12 @@ const AboutScreen = () => {
                 height={400}
                 src={debian}
                 alt="Debian Icon"
-                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
+                style={{
+                  marginLeft: media.xs ? 0 : '$10',
+                  marginRight: media.xs ? 0 : '$10',
+                  marginTop: '$4',
+                  marginBottom: '$10',
+                }}
               />
             </XStack>
           </Slide>
@@ -221,7 +245,12 @@ const AboutScreen = () => {
                 height={400}
                 src={nextjs}
                 alt="Next.js Icon"
-                style={{ marginLeft: media.xs ? 0 : '$10', marginRight: media.xs ? 0 : '$10', marginTop: '$4', marginBottom: '$10' }}
+                style={{
+                  marginLeft: media.xs ? 0 : '$10',
+                  marginRight: media.xs ? 0 : '$10',
+                  marginTop: '$4',
+                  marginBottom: '$10',
+                }}
               />
             </XStack>
           </Slide>
@@ -232,5 +261,3 @@ const AboutScreen = () => {
 }
 
 export default AboutScreen
-
-
