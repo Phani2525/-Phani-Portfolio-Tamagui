@@ -1,12 +1,12 @@
 import React from 'react'
-import { YStack, XStack, Text, SimpleImage, Button, ScrollView, H3 } from 'ui'
+import { YStack, XStack, Text, Button, ScrollView, H3 } from 'ui'
 import { Header } from 'app/components/Header'
-import { Zoom } from 'react-reveal'
+import { Zoom } from 'react-reveal' // Import the Zoom component
 import { LinkStack } from 'app/components/LinkStack'
 import { SolitoImage } from 'solito/image'
 
 const HomeScreen = () => {
-  const icon = require('app/assets/icon.png')
+  const icon = require('app/assets/mypic.png')
   const background = require('app/assets/background1.png')
 
   const resumeFileLink = 'https://drive.google.com/uc?id=1RSUJK6mC0yZMLmGEWbkcDz1XzwRVG0oY'
@@ -27,6 +27,8 @@ const HomeScreen = () => {
       <ScrollView>
         <XStack justifyContent="space-between" padding={20}>
           <Zoom duration={800} delay={200}>
+            {' '}
+            {/* Wrap the content with Zoom */}
             <YStack marginTop="$20" ai="center" space="$6">
               <H3 color="darkgoldenrod" fontSize="$10" fontWeight="700" fontStyle="italic">
                 I'm
@@ -35,7 +37,7 @@ const HomeScreen = () => {
                 {' '}
                 K.S.R PHANI BHUSHAN
               </H3>
-              <Text fontSize={18} fontStyle="italic">
+              <Text fontSize={19} fontStyle="italic">
                 Growing React Native Developer | Expanding Skills in JavaScript and TypeScript for
                 both Mobile and Web Applications.
               </Text>
@@ -64,7 +66,11 @@ const HomeScreen = () => {
               </Button>
             </YStack>
           </Zoom>
-          <SolitoImage src={icon} width={800} height={800} alt="Solito Image" />
+          <Zoom duration={800} delay={200}>
+            {' '}
+            {/* Wrap the icon with Zoom */}
+            <SolitoImage src={icon} width={900} height={800} alt="Solito Image" />
+          </Zoom>
         </XStack>
       </ScrollView>
     </YStack>
