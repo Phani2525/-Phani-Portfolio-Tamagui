@@ -17,7 +17,9 @@ export const SettingsInfo = () => {
     >
       <YStack>
         <Zoom>
-          <H2 fontStyle='italic' color="#fff">About Me</H2>
+          <H2 fontStyle="italic" color="#fff">
+            About Me
+          </H2>
           <div style={{ marginBottom: '24px' }}>
             <Text space fontSize={24} fontStyle="italic" color="#ddd">
               Experienced Software Engineer with a strong foundation in Web and Mobile Application
@@ -28,18 +30,18 @@ export const SettingsInfo = () => {
 
           <div style={{ marginBottom: '24px' }}>
             <Text space fontSize={24} fontStyle="italic" color="#ddd">
-              Basic knowledge of Next.Js and Nest.Js for Full-Stack Development. Possesses a moderated
-              level of DevOps skills, including writing YAML codes, creating Helm Charts, and
-              maintaining EC2 instances with AWS. Skilled in Kubernetes, capable of managing Clusters,
-              Docker containers, and Pods, as well as creating and managing Namespaces.
+              Basic knowledge of Next.Js and Nest.Js for Full-Stack Development. Possesses a
+              moderated level of DevOps skills, including writing YAML codes, creating Helm Charts,
+              and maintaining EC2 instances with AWS. Skilled in Kubernetes, capable of managing
+              Clusters, Docker containers, and Pods, as well as creating and managing Namespaces.
             </Text>
           </div>
 
           <div style={{ marginBottom: '24px' }}>
             <Text fontSize={24} fontStyle="italic" color="#ddd">
-              Experienced in Custom-Debian Operating Systems and Linux environments, leveraging tools
-              like VirtualBox, Boxes, Rancher, OpenLens, K9s, and DigitalOcean for efficient DevOps
-              processes. Committed to delivering high-quality solutions on time, fostering
+              Experienced in Custom-Debian Operating Systems and Linux environments, leveraging
+              tools like VirtualBox, Boxes, Rancher, OpenLens, K9s, and DigitalOcean for efficient
+              DevOps processes. Committed to delivering high-quality solutions on time, fostering
               collaboration, and staying updated with industry trends.
             </Text>
           </div>
@@ -55,7 +57,9 @@ export const SettingsInfo = () => {
 
           <LinkStack jc="center" href="/contact">
             <Fade>
-              <Button>Get in Touch</Button>
+              <Button backgroundColor="goldenrod">
+                <Text fontWeight="600">Get in Touch</Text>
+              </Button>
             </Fade>
           </LinkStack>
         </Zoom>
