@@ -34,7 +34,7 @@ export const SideBar = ({ ...props }: SideBarProps) => {
           About
         </Text>
       </LinkStack>
-      <LinkStack href="/service" jc="center">
+      <LinkStack href="/services" jc="center">
         <LayoutDashboard /> 
         <Text selectable={false} cursor="pointer">
           Services
