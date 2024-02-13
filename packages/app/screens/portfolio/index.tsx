@@ -120,7 +120,9 @@ const PortfolioScreen: React.FC = () => {
                         justifyContent: 'center',
                       }}
                     >
-                      <Text fontSize={16}>View Project on GitHub</Text>
+                      <Text color="orange" fontWeight="600" fontSize={16}>
+                        View Project on GitHub
+                      </Text>
                       <ArrowRight size={20} color="#fff" style={{ marginLeft: '5px' }} />
                     </a>
                   </YStack>
