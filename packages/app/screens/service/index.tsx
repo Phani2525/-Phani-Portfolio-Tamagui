@@ -3,8 +3,10 @@ import { YStack, Text, Card, XStack, H2, ScrollView } from 'ui'
 import { Header } from 'app/components/Header'
 import { Fade } from 'react-reveal'
 import { SolitoImage } from 'solito/image'
+import { useRouter } from 'solito/router'
 
 export const ServiceScreen = () => {
+  const router = useRouter()
   const services = [
     {
       name: 'Web Development',
@@ -64,6 +66,7 @@ export const ServiceScreen = () => {
                   margin="$2"
                   padding="$5"
                   hoverStyle={{ transform: [{ scale: 1.1 }] }}
+                  onPress={() => router.push(`/services/${service.name}`)}
                 >
                   <SolitoImage
                     src={service.image}
