@@ -40,6 +40,7 @@ const AboutScreen = () => {
                 borderBottomWidth="$0.25"
                 width="100%"
                 paddingRight="$8"
+                paddingBottom="$8"
               >
                 <Text
                   padding="$10"
@@ -68,7 +69,6 @@ const AboutScreen = () => {
               </XStack>
             </Slide>
           </Fade>
-
           {/* JavaScript Section */}
           <Fade>
             <Slide right>
@@ -80,6 +80,7 @@ const AboutScreen = () => {
                 borderBottomWidth="$0.25"
                 width="100%"
                 paddingLeft="$8"
+                paddingBottom="$8"
               >
                 <Text
                   padding="$7"
@@ -107,7 +108,6 @@ const AboutScreen = () => {
               </XStack>
             </Slide>
           </Fade>
-
           {/* HTML and CSS Section */}
           <Fade>
             <Slide left>
@@ -118,7 +118,8 @@ const AboutScreen = () => {
                 alignItems={media.xs ? 'center' : 'flex-start'}
                 borderBottomWidth="$0.25"
                 width="100%"
-                paddingRight="$8" // Changed paddingX to padding
+                paddingRight="$8"
+                paddingBottom="$8"
               >
                 <Text
                   padding="$10"
@@ -146,7 +147,6 @@ const AboutScreen = () => {
               </XStack>
             </Slide>
           </Fade>
-
           {/* Kubernetes Section */}
           <Fade>
             <Slide right>
@@ -157,7 +157,8 @@ const AboutScreen = () => {
                 alignItems={media.xs ? 'center' : 'flex-start'}
                 borderBottomWidth="$0.25"
                 width="100%"
-                paddingLeft="$8" // Changed paddingX to padding
+                paddingLeft="$8"
+                paddingBottom="$8"
               >
                 <Text
                   padding="$7"
@@ -185,7 +186,6 @@ const AboutScreen = () => {
               </XStack>
             </Slide>
           </Fade>
-
           {/* Custom Debian Operating Systems Section */}
           <Fade>
             <Slide left>
@@ -196,7 +196,8 @@ const AboutScreen = () => {
                 alignItems={media.xs ? 'center' : 'flex-start'}
                 borderBottomWidth="$0.25"
                 width="100%"
-                paddingRight="$8" // Changed paddingX to padding
+                paddingRight="$8"
+                paddingBottom="$8"
               >
                 <Text
                   padding="$10"
@@ -224,7 +225,6 @@ const AboutScreen = () => {
               </XStack>
             </Slide>
           </Fade>
-
           {/* Next.js Section */}
           <Fade>
             <Slide right>
@@ -235,7 +235,8 @@ const AboutScreen = () => {
                 alignItems={media.xs ? 'center' : 'flex-start'}
                 borderBottomWidth="$0.25"
                 width="100%"
-                paddingLeft="$8" // Changed paddingX to padding
+                paddingLeft="$8"
+                paddingBottom="$8"
               >
                 <Text
                   padding="$7"
