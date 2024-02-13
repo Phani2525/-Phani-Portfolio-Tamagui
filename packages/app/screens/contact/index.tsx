@@ -49,6 +49,7 @@ const ContactScreen = () => {
                   fontSize={44}
                   fontWeight="bold"
                   textAlign="center"
+                  color="springgreen"
                 >
                   Contact Me
                 </Text>
@@ -61,11 +62,12 @@ const ContactScreen = () => {
 
               <Slide left delay={100}>
                 <Button
+                  backgroundColor="goldenrod"
                   onPress={() => openLinkInNewTab('https://github.com/Phani2525')}
                   width="200px"
                 >
                   <Github size={24} color="white" />
-                  <Text fontSize="$5" color="$white" marginLeft="$1">
+                  <Text fontWeight="600" fontSize="$5" color="$white" marginLeft="$1">
                     GitHub
                   </Text>
                 </Button>
@@ -73,11 +75,12 @@ const ContactScreen = () => {
 
               <Slide left delay={200}>
                 <Button
+                  backgroundColor="goldenrod"
                   onPress={() => openLinkInNewTab('https://gitlab.com/phani25')}
                   width="200px"
                 >
                   <Gitlab size={24} color="white" />
-                  <Text fontSize="$5" color="$white" marginLeft="$1">
+                  <Text fontWeight="600" fontSize="$5" color="$white" marginLeft="$1">
                     GitLab
                   </Text>
                 </Button>
@@ -89,18 +92,23 @@ const ContactScreen = () => {
                     openLinkInNewTab('https://www.linkedin.com/in/phani-bhushan-131b1327a/')
                   }
                   width="200px"
+                  backgroundColor="goldenrod"
                 >
                   <Linkedin size={24} color="white" />
-                  <Text fontSize="$5" color="$white" marginLeft="$1">
+                  <Text fontWeight="600" fontSize="$5" color="$white" marginLeft="$1">
                     LinkedIn
                   </Text>
                 </Button>
               </Slide>
 
               <Slide left delay={400}>
-                <Button onPress={() => openEmailClient('kotharuphani@gmail.com')} width="200px">
+                <Button
+                  backgroundColor="goldenrod"
+                  onPress={() => openEmailClient('kotharuphani@gmail.com')}
+                  width="200px"
+                >
                   <Mail size={24} color="white" />
-                  <Text fontSize="$5" color="$white" marginLeft="$1">
+                  <Text fontWeight="600" fontSize="$5" color="$white" marginLeft="$1">
                     Email
                   </Text>
                 </Button>
