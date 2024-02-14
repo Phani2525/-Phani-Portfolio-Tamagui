@@ -66,7 +66,7 @@ export const ServiceScreen = () => {
                   margin="$2"
                   padding="$5"
                   hoverStyle={{ transform: [{ scale: 1.1 }] }}
-                  onPress={() => router.push(`/services/${service.name}`)}
+                  // onPress={() => router.push(`/services/${service.name}`)}
                 >
                   <SolitoImage
                     src={service.image}
