@@ -1,5 +1,4 @@
-// next.config.js
-
+/** @type {import('next').NextConfig} */
 const { withTamagui } = require('@tamagui/next-plugin')
 const { join } = require('path')
 
@@ -57,6 +56,7 @@ const plugins = [
 ]
 
 module.exports = function () {
+  /** @type {import('next').NextConfig} */
   let config = {
     typescript: {
       ignoreBuildErrors: true,
