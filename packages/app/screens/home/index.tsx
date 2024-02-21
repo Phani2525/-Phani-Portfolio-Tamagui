@@ -1,7 +1,7 @@
 import React from 'react'
 import { YStack, XStack, Text, Button, ScrollView, H3, Card } from 'ui'
 import { Header } from 'app/components/Header'
-import { Zoom } from 'react-reveal' // Import the Zoom component
+import { Zoom } from 'react-reveal'
 import { LinkStack } from 'app/components/LinkStack'
 import { SolitoImage } from 'solito/image'
 
@@ -32,10 +32,6 @@ const HomeScreen = () => {
           backgroundImage: `url(${background})`,
           backgroundSize: 'cover',
           minHeight: '100vh',
-          display: 'flex', // Ensure content is aligned for both web and mobile
-          flexDirection: 'column', // Align content in a column for both web and mobile
-          justifyContent: 'center', // Center content vertically for both web and mobile
-          alignItems: 'center', // Center content horizontally for both web and mobile
         }}
       >
         <Header />
