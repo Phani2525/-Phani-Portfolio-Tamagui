@@ -51,7 +51,7 @@ export const ServiceScreen = () => {
         }}
       >
         <Header />
-        <ScrollView>
+        <ScrollView horizontal>
           <H2 marginTop="$6" space fontSize={40} alignSelf="center">
             <Text fontStyle="italic">My Services</Text>
           </H2>
