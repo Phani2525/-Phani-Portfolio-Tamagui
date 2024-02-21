@@ -32,6 +32,10 @@ const HomeScreen = () => {
           backgroundImage: `url(${background})`,
           backgroundSize: 'cover',
           minHeight: '100vh',
+          display: 'flex', // Ensure content is aligned for both web and mobile
+          flexDirection: 'column', // Align content in a column for both web and mobile
+          justifyContent: 'center', // Center content vertically for both web and mobile
+          alignItems: 'center', // Center content horizontally for both web and mobile
         }}
       >
         <Header />
