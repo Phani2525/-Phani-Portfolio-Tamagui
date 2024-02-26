@@ -51,40 +51,42 @@ export const ServiceScreen = () => {
         }}
       >
         <Header />
-        <ScrollView horizontal>
+        <ScrollView>
           <H2 marginTop="$6" space fontSize={40} alignSelf="center">
             <Text fontStyle="italic">My Services</Text>
           </H2>
-          <XStack marginTop="$8" space jc="space-evenly">
-            {services.map((service, index) => (
-              <Fade key={index} duration={800} delay={index * 200}>
-                <Card
-                  backgroundColor="$gray7Dark"
-                  space="$1"
-                  width="400px"
-                  height="500px"
-                  margin="$2"
-                  padding="$5"
-                  hoverStyle={{ transform: [{ scale: 1.1 }] }}
-                  // onPress={() => router.push(`/services/${service.name}`)}
-                >
-                  <SolitoImage
-                    src={service.image}
-                    alt={service.name}
-                    style={{ width: '100%', height: '70%', borderRadius: 10 }}
-                  />
-                  <YStack jc="center" ai="center" marginTop="$2">
-                    <Text fontStyle="italic" fontSize={28} fontWeight="bold">
-                      {service.name}
-                    </Text>
-                    <Text fontStyle="italic" fontSize={20} marginTop="$2">
-                      {service.description}
-                    </Text>
-                  </YStack>
-                </Card>
-              </Fade>
-            ))}
-          </XStack>
+          <ScrollView horizontal>
+            <XStack marginTop="$8" space jc="space-evenly">
+              {services.map((service, index) => (
+                <Fade key={index} duration={800} delay={index * 200}>
+                  <Card
+                    backgroundColor="$gray7Dark"
+                    space="$1"
+                    width="400px"
+                    height="500px"
+                    margin="$2"
+                    padding="$5"
+                    hoverStyle={{ transform: [{ scale: 1.1 }] }}
+                    // onPress={() => router.push(`/services/${service.name}`)}
+                  >
+                    <SolitoImage
+                      src={service.image}
+                      alt={service.name}
+                      style={{ width: '100%', height: '70%', borderRadius: 10 }}
+                    />
+                    <YStack jc="center" ai="center" marginTop="$2">
+                      <Text fontStyle="italic" fontSize={28} fontWeight="bold">
+                        {service.name}
+                      </Text>
+                      <Text fontStyle="italic" fontSize={20} marginTop="$2">
+                        {service.description}
+                      </Text>
+                    </YStack>
+                  </Card>
+                </Fade>
+              ))}
+            </XStack>
+          </ScrollView>
         </ScrollView>
       </YStack>
     </Card>
