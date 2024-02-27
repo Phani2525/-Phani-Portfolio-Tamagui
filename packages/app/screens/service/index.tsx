@@ -56,7 +56,7 @@ export const ServiceScreen = () => {
             <Text fontStyle="italic">My Services</Text>
           </H2>
           <ScrollView horizontal>
-            <XStack marginTop="$8" space jc="space-evenly">
+            <XStack marginTop="$8" space="$10" marginLeft="$7">
               {services.map((service, index) => (
                 <Fade key={index} duration={800} delay={index * 200}>
                   <Card
