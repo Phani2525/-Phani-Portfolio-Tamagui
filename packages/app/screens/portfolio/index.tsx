@@ -1,5 +1,5 @@
 import React from 'react'
-import { YStack, Text, Card, XStack, H2, ScrollView } from 'ui' // Changed SimpleImage to SolitoImage
+import { YStack, Text, Card, XStack, H2, ScrollView } from 'ui'
 import { Header } from 'app/components/Header'
 import { ArrowRight } from '@tamagui/lucide-icons'
 import { Fade } from 'react-reveal'
@@ -17,13 +17,14 @@ const PortfolioScreen: React.FC = () => {
   const projects: Project[] = [
     {
       name: 'Phani s Portfolio',
-      description: 'A Bsasic Portfolio Website with Smooth Animations',
+      description: 'A Basic Portfolio Website with Smooth Animations',
       image: require('app/assets/portfolio.png'),
       githubLink: 'https://github.com/Phani2525/-Phani-Portfolio-Tamagui',
     },
     {
       name: 'Multiplatform Project',
-      description: 'A Multiplatform Project Template with React Native and React Web',
+      description:
+        'A React Native Template supports MultiPlatforms using Multiplatform.one NPM package',
       image: require('app/assets/multiplatform.png'),
       githubLink: 'https://github.com/Phani2525/-Multiplatform-Project-Template',
     },
@@ -86,7 +87,7 @@ const PortfolioScreen: React.FC = () => {
                   backgroundColor="$gray7Dark"
                   space="$1"
                   width="400px"
-                  height="500px"
+                  height="580px"
                   margin="$2"
                   padding="$5"
                 >
@@ -114,7 +115,7 @@ const PortfolioScreen: React.FC = () => {
                         padding: '10px',
                         borderRadius: '5px',
                         cursor: 'pointer',
-                        marginTop: '10px',
+                        marginTop: '30px',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
