@@ -75,10 +75,10 @@ export const ServiceScreen = () => {
                       style={{ width: '100%', height: '70%', borderRadius: 10 }}
                     />
                     <YStack jc="center" ai="center" marginTop="$2">
-                      <Text fontStyle="italic" fontSize={28} fontWeight="bold">
+                      <Text fontStyle="italic" fontSize={28} fontWeight="bold" color="orange">
                         {service.name}
                       </Text>
-                      <Text fontStyle="italic" fontSize={20} marginTop="$2" color="orange">
+                      <Text fontStyle="italic" fontSize={20} marginTop="$2">
                         {service.description}
                       </Text>
                     </YStack>
