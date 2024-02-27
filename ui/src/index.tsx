@@ -3,5 +3,5 @@ export * from '@tamagui/toast'
 export * from './MyComponent'
 export { config } from './tamagui.config'
 export * from './CustomToast'
-export * from "./components"
-export * from  "./hooks"
+export * from './components'
+export * from './hooks'
