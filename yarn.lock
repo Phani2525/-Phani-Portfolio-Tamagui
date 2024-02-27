@@ -16197,6 +16197,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"phani-portfolio-tamagui@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "phani-portfolio-tamagui@workspace:."
+  dependencies:
+    "@babel/runtime": "npm:^7.18.9"
+    "@manypkg/cli": "npm:^0.19.1"
+    check-dependency-version-consistency: "npm:^3.0.3"
+    eslint: "npm:^8.21.0"
+    node-gyp: "npm:^9.3.1"
+    prettier: "npm:^2.7.1"
+    turbo: "npm:^1.10.3"
+    typescript: "npm:^5.3.3"
+  languageName: unknown
+  linkType: soft
+
 "picocolors@npm:1.0.0, picocolors@npm:^1.0.0":
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
@@ -18813,21 +18828,6 @@ __metadata:
   checksum: 10/58f1c54d339e1ff635f7a3773f4590acf51c14fd1024dfda38459821ea568744f7efaf727a2daa1f7e733905ca62c091fdfc98d2862f49fb6121a636340d08ce
   languageName: node
   linkType: hard
-
-"tamagui-template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "tamagui-template@workspace:."
-  dependencies:
-    "@babel/runtime": "npm:^7.18.9"
-    "@manypkg/cli": "npm:^0.19.1"
-    check-dependency-version-consistency: "npm:^3.0.3"
-    eslint: "npm:^8.21.0"
-    node-gyp: "npm:^9.3.1"
-    prettier: "npm:^2.7.1"
-    turbo: "npm:^1.10.3"
-    typescript: "npm:^5.3.3"
-  languageName: unknown
-  linkType: soft
 
 "tamagui@npm:^1.90.2":
   version: 1.90.2

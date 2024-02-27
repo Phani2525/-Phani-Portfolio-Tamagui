@@ -46,7 +46,12 @@ const PortfolioScreen: React.FC = () => {
       image: require('app/assets/GK.png'),
       githubLink: 'https://github.com/Phani2525/project1',
     },
-
+    {
+      name: 'TamaGUI-Skeleton',
+      description: 'A Skeleton for TamaGUI',
+      image: require('app/assets/skeleton.png'),
+      githubLink: 'https://github.com/Phani2525/TamaGUI-Skeleton',
+    },
     // Add more projects as needed
   ]
 
