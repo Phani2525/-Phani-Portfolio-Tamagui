@@ -3,17 +3,17 @@
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
-      "app/*": ["./packages/app/*"],
-      "ui/*": ["./packages/ui/*"]
+      "app/*": ["./app/*"],
+      "ui/*": ["./ui/*"]
     }
   },
-  "extends": "expo/tsconfig.base",
+  "extends": "tsconfig.base",
   "exclude": [
     "**/node_modules",
     "**/dist",
     "**/types",
-    "apps/next/out",
-    "apps/next/.next",
-    "apps/next/.tamagui"
+    "platforms/next/out",
+    "platforms/next/.next",
+    "platforms/next/.tamagui"
   ]
 }
