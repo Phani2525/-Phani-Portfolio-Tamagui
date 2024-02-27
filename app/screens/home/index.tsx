@@ -8,6 +8,7 @@ import { SolitoImage } from 'solito/image'
 const HomeScreen = () => {
   const icon = require('app/assets/mypic.png')
   const background = require('app/assets/background1.png')
+  const [height, setHeight] = React.useState(400)
 
   const resumeFileLink = 'https://drive.google.com/uc?id=1RSUJK6mC0yZMLmGEWbkcDz1XzwRVG0oY'
 
@@ -20,9 +21,10 @@ const HomeScreen = () => {
 
   return (
     <Card fullscreen>
-      <Card.Background>
+      <Card.Background height={height}>
         <SolitoImage
           src={background}
+          resizeMode="cover"
           alt="background"
           style={{ width: '100%', height: '100%', borderRadius: 10 }}
         />
@@ -33,6 +35,7 @@ const HomeScreen = () => {
           backgroundSize: 'cover',
           minHeight: '100vh',
         }}
+        onLayout={(e) => setHeight(e.nativeEvent.layout.height)}
       >
         <Header />
         <ScrollView>

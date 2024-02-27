@@ -13,17 +13,22 @@ const AboutScreen = () => {
   const nextjs = require('app/assets/next.png')
   const media = useMedia()
   const background = require('app/assets/background1.png')
+  const [height, setHeight] = React.useState(400)
 
   return (
     <Card fullscreen>
-      <Card.Background>
+      <Card.Background height={height}>
         <SolitoImage
           src={background}
           alt="background"
           style={{ width: '100%', height: '100%', borderRadius: 10 }}
+          resizeMode="cover"
         />
       </Card.Background>
-      <YStack style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
+      <YStack
+        style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}
+        onLayout={(e) => setHeight(e.nativeEvent.layout.height)}
+      >
         <Header />
         <ScrollView>
           <H2 marginTop="$4.5" alignSelf="center" fontSize="$10" fontStyle="italic">
