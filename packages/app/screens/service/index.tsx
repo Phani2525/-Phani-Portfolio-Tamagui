@@ -63,9 +63,9 @@ export const ServiceScreen = () => {
                     backgroundColor="$gray7Dark"
                     space="$1"
                     width="400px"
-                    height="500px"
+                    height="580px"
                     margin="$2"
-                    padding="$5"
+                    padding="$4"
                     hoverStyle={{ transform: [{ scale: 1.1 }] }}
                     // onPress={() => router.push(`/services/${service.name}`)}
                   >
@@ -78,7 +78,7 @@ export const ServiceScreen = () => {
                       <Text fontStyle="italic" fontSize={28} fontWeight="bold">
                         {service.name}
                       </Text>
-                      <Text fontStyle="italic" fontSize={20} marginTop="$2">
+                      <Text fontStyle="italic" fontSize={20} marginTop="$2" color="orange">
                         {service.description}
                       </Text>
                     </YStack>
