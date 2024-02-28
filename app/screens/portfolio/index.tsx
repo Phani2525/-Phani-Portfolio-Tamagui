@@ -77,7 +77,7 @@ const PortfolioScreen: React.FC = () => {
       >
         <Header />
         <H2 marginTop="$6" space fontSize={40} alignSelf="center">
-          <Text fontStyle="italic">My Portfolios</Text>
+          <Text fontStyle="italic">My Portfolio</Text>
         </H2>
         <ScrollView horizontal>
           <XStack

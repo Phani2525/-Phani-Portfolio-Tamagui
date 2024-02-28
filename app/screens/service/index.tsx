@@ -61,9 +61,8 @@ export const ServiceScreen = () => {
                 <Fade key={index} duration={800} delay={index * 200}>
                   <Card
                     backgroundColor="$gray7Dark"
-                    space="$1"
-                    width="400px"
-                    height="580px"
+                    width={400}
+                    height={600}
                     margin="$2"
                     padding="$4"
                     hoverStyle={{ transform: [{ scale: 1.1 }] }}
