@@ -32,7 +32,7 @@ export const Themes = ({ onThemeChange, theme }: Props) => {
     TABS: '#17a2b8',
   }
 
-  const [isDarkTheme, setIsDarkTheme] = useState(theme === 'dark' || false)
+  const [isDarkTheme, setIsDarkTheme] = useState(theme === 'dark' || true) // Enabled dark theme by default
   const [themeColors, setThemeColors] = useState(defaultColors)
   const [selectedColor, setSelectedColor] = useState('#fff')
   const [activeColorType, setActiveColorType] = useState('')
