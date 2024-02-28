@@ -60,18 +60,19 @@ export const ServiceScreen = () => {
               {services.map((service, index) => (
                 <Fade key={index} duration={800} delay={index * 200}>
                   <Card
-                    backgroundColor="$gray7Dark"
+                    backgroundColor="$gray9Dark"
                     width={400}
                     height={600}
                     margin="$2"
                     padding="$4"
                     hoverStyle={{ transform: [{ scale: 1.1 }] }}
                     // onPress={() => router.push(`/services/${service.name}`)}
+                    // borderRadius={10}
                   >
                     <SolitoImage
                       src={service.image}
                       alt={service.name}
-                      style={{ width: '100%', height: '70%', borderRadius: 10 }}
+                      style={{ width: '100%', height: '70%' }}
                     />
                     <YStack jc="center" ai="center" marginTop="$2">
                       <Text fontStyle="italic" fontSize={28} fontWeight="bold" color="orange">
