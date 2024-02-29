@@ -60,7 +60,7 @@ export const ServiceScreen = () => {
               {services.map((service, index) => (
                 <Fade key={index} duration={800} delay={index * 200}>
                   <Card
-                    backgroundColor="$gray9Dark"
+                    backgroundColor="$gray7Dark"
                     width={400}
                     height={600}
                     margin="$2"
