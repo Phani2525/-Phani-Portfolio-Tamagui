@@ -16,13 +16,15 @@ const ContactScreen = () => {
 
   const contactImage = require('app/assets/contact.png')
   const background = require('app/assets/background1.png')
+  const [height, setHeight] = React.useState(950)
 
   return (
     <Card fullscreen>
-      <Card.Background>
+      <Card.Background height={height}>
         <SolitoImage
           src={background}
           alt="background"
+          resizeMode="cover"
           style={{ width: '100%', height: '100%', borderRadius: 10 }}
         />
       </Card.Background>
@@ -55,19 +57,25 @@ const ContactScreen = () => {
                 </Text>
               </Slide>
 
-              <Text fontSize={30} fontStyle="italic" textAlign="center" maxWidth="700px">
+              <Text fontSize={30} fontStyle="italic" textAlign="center" maxWidth={700}>
                 Feel free to reach out to me for any inquiries, collaboration, or just to say hello.
                 You can connect with me through the following channels:
               </Text>
 
               <Slide left delay={100}>
                 <Button
-                  backgroundColor="goldenrod"
+                  onMouseEnter={(e) =>
+                    e.currentTarget.style.setProperty('background-color', 'purple', 'important')
+                  }
+                  onMouseLeave={(e) =>
+                    e.currentTarget.style.setProperty('background-color', 'slateblue', 'important')
+                  }
+                  style={{ backgroundColor: 'slateblue' }}
                   onPress={() => openLinkInNewTab('https://github.com/Phani2525')}
-                  width="200px"
+                  width="$14"
                 >
                   <Github size={24} color="white" />
-                  <Text fontWeight="600" fontSize="$5" color="$white" marginLeft="$1">
+                  <Text fontWeight="600" fontSize="$5" color="white" marginLeft="$1">
                     GitHub
                   </Text>
                 </Button>
@@ -75,12 +83,18 @@ const ContactScreen = () => {
 
               <Slide left delay={200}>
                 <Button
-                  backgroundColor="goldenrod"
+                  onMouseEnter={(e) =>
+                    e.currentTarget.style.setProperty('background-color', 'purple', 'important')
+                  }
+                  onMouseLeave={(e) =>
+                    e.currentTarget.style.setProperty('background-color', 'slateblue', 'important')
+                  }
+                  style={{ backgroundColor: 'slateblue' }}
                   onPress={() => openLinkInNewTab('https://gitlab.com/phani25')}
-                  width="200px"
+                  width="$14"
                 >
                   <Gitlab size={24} color="white" />
-                  <Text fontWeight="600" fontSize="$5" color="$white" marginLeft="$1">
+                  <Text fontWeight="600" fontSize="$5" color="white" marginLeft="$1">
                     GitLab
                   </Text>
                 </Button>
@@ -88,14 +102,20 @@ const ContactScreen = () => {
 
               <Slide left delay={300}>
                 <Button
+                  onMouseEnter={(e) =>
+                    e.currentTarget.style.setProperty('background-color', 'purple', 'important')
+                  }
+                  onMouseLeave={(e) =>
+                    e.currentTarget.style.setProperty('background-color', 'slateblue', 'important')
+                  }
+                  style={{ backgroundColor: 'slateblue' }}
                   onPress={() =>
                     openLinkInNewTab('https://www.linkedin.com/in/phani-bhushan-131b1327a/')
                   }
-                  width="200px"
-                  backgroundColor="goldenrod"
+                  width="$14"
                 >
                   <Linkedin size={24} color="white" />
-                  <Text fontWeight="600" fontSize="$5" color="$white" marginLeft="$1">
+                  <Text fontWeight="600" fontSize="$5" color="white" marginLeft="$1">
                     LinkedIn
                   </Text>
                 </Button>
@@ -103,12 +123,18 @@ const ContactScreen = () => {
 
               <Slide left delay={400}>
                 <Button
-                  backgroundColor="goldenrod"
+                  onMouseEnter={(e) =>
+                    e.currentTarget.style.setProperty('background-color', 'purple', 'important')
+                  }
+                  onMouseLeave={(e) =>
+                    e.currentTarget.style.setProperty('background-color', 'slateblue', 'important')
+                  }
+                  style={{ backgroundColor: 'slateblue' }}
                   onPress={() => openEmailClient('kotharuphani@gmail.com')}
-                  width="200px"
+                  width="$14"
                 >
                   <Mail size={24} color="white" />
-                  <Text fontWeight="600" fontSize="$5" color="$white" marginLeft="$1">
+                  <Text fontWeight="600" fontSize="$5" color="white" marginLeft="$1">
                     Email
                   </Text>
                 </Button>

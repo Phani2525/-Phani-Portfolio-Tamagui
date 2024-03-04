@@ -32,13 +32,15 @@ export const ServiceScreen = () => {
   ]
 
   const background = require('app/assets/background1.png')
+  const [height, setHeight] = React.useState(950)
 
   return (
     <Card fullscreen>
-      <Card.Background>
+      <Card.Background height={height}>
         <SolitoImage
           src={background}
           alt="background"
+          resizeMode="cover"
           style={{ width: '100%', height: '100%', borderRadius: 10 }}
         />
       </Card.Background>

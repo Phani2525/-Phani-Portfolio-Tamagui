@@ -81,12 +81,15 @@ const PortfolioScreen: React.FC = () => {
     }
   }, [autoScroll])
 
+  const [height, setHeight] = React.useState(900)
+
   return (
     <Card fullscreen>
-      <Card.Background>
+      <Card.Background height={height}>
         <SolitoImage
           src={background}
           alt="background"
+          resizeMode="cover"
           style={{ width: '100%', height: '100%', borderRadius: 10 }}
         />
       </Card.Background>
