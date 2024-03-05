@@ -8,6 +8,7 @@ import { Provider } from 'app/provider'
 import Head from 'next/head'
 import React from 'react'
 import type { SolitoAppProps } from 'solito'
+import { Analytics } from '@vercel/analytics/react'
 
 if (process.env.NODE_ENV === 'production') {
   require('../public/tamagui.css')
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>
+      <Analytics />
     </>
   )
 }
