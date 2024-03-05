@@ -4,6 +4,7 @@ import { Header } from 'app/components/Header'
 import { Zoom } from 'react-reveal'
 import { LinkStack } from 'app/components/LinkStack'
 import { SolitoImage } from 'solito/image'
+import { Analytics } from '@vercel/analytics/react'
 
 const HomeScreen = () => {
   const icon = require('app/assets/mypic.png')
@@ -86,6 +87,7 @@ const HomeScreen = () => {
               <SolitoImage src={icon} width={900} height={800} alt="Solito Image" />
             </Zoom>
           </XStack>
+          <Analytics />
         </ScrollView>
       </YStack>
     </Card>
