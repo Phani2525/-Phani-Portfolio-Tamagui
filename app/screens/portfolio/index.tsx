@@ -106,30 +106,6 @@ const PortfolioScreen: React.FC = () => {
         <H2 marginTop="$6" space fontSize={40} alignSelf="center">
           <Text fontStyle="italic">My Portfolio</Text>
         </H2>
-        <Button
-          onPress={() => scroll('left')}
-          style={{
-            position: 'absolute',
-            left: 20,
-            top: '50%',
-            zIndex: 1,
-            transform: 'translateY(-50%)',
-          }}
-        >
-          <ArrowLeft size={30} color="powderblue" />
-        </Button>
-        <Button
-          onPress={() => scroll('right')}
-          style={{
-            position: 'absolute',
-            right: 20,
-            top: '50%',
-            zIndex: 1,
-            transform: 'translateY(-50%)',
-          }}
-        >
-          <ArrowRight size={30} color="powderblue" />
-        </Button>
         <ScrollView horizontal ref={scrollViewRef}>
           <XStack
             marginTop="$8"
@@ -190,6 +166,5 @@ const PortfolioScreen: React.FC = () => {
       </YStack>
     </Card>
   )
-}
-
+                    }
 export default PortfolioScreen
